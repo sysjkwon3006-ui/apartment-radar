@@ -1,0 +1,868 @@
+{
+  "schema_version": "1.0.0",
+  "about": "Candidate names and unverified reference descriptors from prior research. All are pending independent source re-validation. No trade prices are published as verified.",
+  "complexes": [
+    {
+      "id": "gw-bellarte",
+      "name": "과천푸르지오벨라르테",
+      "region": "과천",
+      "district": "과천",
+      "neighborhood": "갈현동",
+      "tags": [
+        "과천",
+        "갈현동"
+      ],
+      "address": "경기도 과천시 과천대로8길 65",
+      "lot_address": "갈현동 824",
+      "households": 504,
+      "built_year": 2022,
+      "types": [
+        {
+          "area_m2": 84.9763,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "gw-central",
+      "name": "과천센트럴파크푸르지오써밋",
+      "region": "과천",
+      "district": "과천",
+      "neighborhood": "부림동",
+      "tags": [
+        "과천",
+        "부림동"
+      ],
+      "address": "경기도 과천시 별양로 164",
+      "lot_address": "부림동 96",
+      "households": 1317,
+      "built_year": 2020,
+      "types": [
+        {
+          "area_m2": 84.99,
+          "status": "pending"
+        },
+        {
+          "area_m2": 101.93,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "gw-raemian",
+      "name": "래미안슈르(원문동)",
+      "region": "과천",
+      "district": "과천",
+      "neighborhood": "원문동",
+      "tags": [
+        "과천",
+        "원문동"
+      ],
+      "address": "경기도 과천시 별양로 12",
+      "lot_address": "원문동 4",
+      "households": 2899,
+      "built_year": 2008,
+      "types": [
+        {
+          "area_m2": 84.95,
+          "status": "pending"
+        },
+        {
+          "area_m2": 116.99,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "gw-prugio",
+      "name": "과천푸르지오써밋",
+      "region": "과천",
+      "district": "과천",
+      "neighborhood": "중앙동",
+      "tags": [
+        "과천",
+        "중앙동"
+      ],
+      "address": null,
+      "lot_address": null,
+      "households": 1571,
+      "built_year": 2020,
+      "types": [
+        {
+          "area_m2": 84,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-yangji2",
+      "name": "양지마을2단지청구",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "수내동",
+      "tags": [
+        "분당",
+        "수내동"
+      ],
+      "address": "경기도 성남시 분당구 내정로 185",
+      "lot_address": "수내동 36",
+      "households": 768,
+      "built_year": 1992,
+      "types": [
+        {
+          "area_m2": 134.8,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-yangji1",
+      "name": "양지마을1단지금호",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "수내동",
+      "tags": [
+        "분당",
+        "수내동"
+      ],
+      "address": "경기도 성남시 분당구 수내로 74",
+      "lot_address": "수내동 34",
+      "households": 918,
+      "built_year": 1992,
+      "types": [
+        {
+          "area_m2": 133.82,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-parktown",
+      "name": "파크타운롯데",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "수내동",
+      "tags": [
+        "분당",
+        "수내동"
+      ],
+      "address": "경기도 성남시 분당구 내정로 152",
+      "lot_address": "수내동 55",
+      "households": 842,
+      "built_year": 1993,
+      "types": [
+        {
+          "area_m2": 134.91,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-sibeom",
+      "name": "시범우성",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "서현동",
+      "tags": [
+        "분당",
+        "서현동"
+      ],
+      "address": "경기도 성남시 분당구 중앙공원로 54",
+      "lot_address": "서현동 96",
+      "households": 1874,
+      "built_year": 1991,
+      "types": [
+        {
+          "area_m2": 129.21,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-sangrok",
+      "name": "상록마을우성1",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "정자동",
+      "tags": [
+        "분당",
+        "정자동"
+      ],
+      "address": "경기도 성남시 분당구 내정로 55",
+      "lot_address": "정자동 121",
+      "households": 1762,
+      "built_year": 1994,
+      "types": [
+        {
+          "area_m2": 129.72,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-parkview",
+      "name": "파크뷰",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "정자동",
+      "tags": [
+        "분당",
+        "정자동"
+      ],
+      "address": "경기도 성남시 분당구 정자일로 248",
+      "lot_address": "정자동 6",
+      "households": 1829,
+      "built_year": 2004,
+      "types": [
+        {
+          "area_m2": 124.52,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-cheongsol",
+      "name": "청솔마을8단지대원",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "금곡동",
+      "tags": [
+        "분당",
+        "금곡동"
+      ],
+      "address": null,
+      "lot_address": null,
+      "households": 820,
+      "built_year": null,
+      "types": [
+        {
+          "area_m2": 129.45,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "bd-doosan",
+      "name": "두산위브트레지움",
+      "region": "분당",
+      "district": "분당",
+      "neighborhood": "금곡동",
+      "tags": [
+        "분당",
+        "금곡동"
+      ],
+      "address": null,
+      "lot_address": null,
+      "households": 656,
+      "built_year": null,
+      "types": [
+        {
+          "area_m2": 120.14,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "su-clasiel",
+      "name": "성복역롯데캐슬클라시엘",
+      "region": "수지",
+      "district": "수지",
+      "neighborhood": "성복동",
+      "tags": [
+        "수지",
+        "성복동"
+      ],
+      "address": "경기도 용인시 수지구 성복1로 35",
+      "lot_address": "성복동 819",
+      "households": 1094,
+      "built_year": 2021,
+      "types": [
+        {
+          "area_m2": 84.91,
+          "status": "pending"
+        },
+        {
+          "area_m2": 84.95,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "su-gold",
+      "name": "성복역롯데캐슬골드타운",
+      "region": "수지",
+      "district": "수지",
+      "neighborhood": "성복동",
+      "tags": [
+        "수지",
+        "성복동"
+      ],
+      "address": "경기도 용인시 수지구 성복2로 10",
+      "lot_address": "성복동 789",
+      "households": 2356,
+      "built_year": 2019,
+      "types": [
+        {
+          "area_m2": 84.91,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "su-parknine",
+      "name": "성복역롯데캐슬파크나인",
+      "region": "수지",
+      "district": "수지",
+      "neighborhood": "성복동",
+      "tags": [
+        "수지",
+        "성복동"
+      ],
+      "address": "경기도 용인시 수지구 성복1로 13",
+      "lot_address": "성복동 814",
+      "households": 534,
+      "built_year": 2020,
+      "types": [
+        {
+          "area_m2": 84.91,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "se-hills",
+      "name": "서초힐스",
+      "region": "서초",
+      "district": "서초",
+      "neighborhood": "우면동",
+      "tags": [
+        "서초",
+        "우면동"
+      ],
+      "address": "서울특별시 서초구 양재대로2길 90",
+      "lot_address": "우면동 773",
+      "households": 1082,
+      "built_year": 2012,
+      "types": [
+        {
+          "area_m2": 84.97,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "se-nature",
+      "name": "서초네이처힐3단지",
+      "region": "서초",
+      "district": "서초",
+      "neighborhood": "우면동",
+      "tags": [
+        "서초",
+        "우면동"
+      ],
+      "address": "서울특별시 서초구 태봉로2길 60",
+      "lot_address": "우면동 717",
+      "households": 1251,
+      "built_year": 2013,
+      "types": [
+        {
+          "area_m2": 84.77,
+          "status": "pending"
+        },
+        {
+          "area_m2": 114.79,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    },
+    {
+      "id": "gd-beneruce",
+      "name": "고덕롯데캐슬베네루체",
+      "region": "강동",
+      "district": "강동",
+      "neighborhood": "상일동",
+      "tags": [
+        "강동",
+        "상일동"
+      ],
+      "address": "서울특별시 강동구 상암로79길 88",
+      "lot_address": "상일동 514",
+      "households": 1859,
+      "built_year": 2019,
+      "types": [
+        {
+          "area_m2": 84.92,
+          "status": "pending"
+        }
+      ],
+      "verification": {
+        "status": "pending",
+        "checked_at": null,
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+      },
+      "static_sources": [],
+      "sales_sources": [],
+      "lease_sources": [],
+      "sales": [],
+      "leases": [],
+      "trend": [],
+      "pricing": {
+        "interest": null,
+        "fair_min": null,
+        "fair_max": null,
+        "chase": null
+      },
+      "score": {
+        "asset": null,
+        "value": null,
+        "commute": null,
+        "living": null
+      },
+      "commute_note": "동탄 실제 출퇴근 경로 미측정",
+      "pros": "검증 후 추가",
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+    }
+  ]
+}
