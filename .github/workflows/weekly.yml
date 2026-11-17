@@ -1,0 +1,28 @@
+name: Weekly data integrity check
+on:
+  workflow_dispatch:
+  schedule:
+    # 07:15 Saturday Asia/Seoul == 22:15 Friday UTC (KST has no DST)
+    - cron: "15 22 * * 5"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - ".github/workflows/weekly.yml"
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate locally stored data
+        run: python scripts/validate.py
+      - name: Clarify update scope
+        run: echo "Schema check complete. No source APIs connected; no property transactions were fetched or marked verified."
