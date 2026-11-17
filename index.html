@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="서울 한강 이남·경기 남부 아파트 지역별 TOP5 대시보드. 두 출처 검증을 통과한 거래만 확정 표시합니다.">
+  <title>Apartment Radar | 지역별 아파트 TOP5</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="site-header">
+    <div class="wrap header-flex"><div class="brand"><span class="logo" aria-hidden="true">⌂</span><span>Apartment <strong>Radar</strong></span></div><span class="micro">SEOUL SOUTH · GYEONGGI</span></div>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero">
+      <div class="eyebrow">REAL ESTATE INTELLIGENCE</div>
+      <h1>내가 직접 선택하는<br><span>지역별 아파트 TOP5</span></h1>
+      <p>급지와 장기 자산가치, 동탄 출퇴근, 실거래 검증을 함께 비교합니다. 검증되지 않은 거래는 시세처럼 보여주지 않습니다.</p>
+      <div class="statusline"><span class="status-dot" aria-hidden="true"></span><span id="status-text">데이터 상태 확인 중…</span></div>
+    </section>
+    <section class="metrics" aria-label="대시보드 요약">
+      <div class="metric"><span>등록 관심 후보</span><strong id="total-count">—</strong><small>검증대기 포함</small></div>
+      <div class="metric"><span>검증 완료 단지</span><strong id="verified-count">—</strong><small>추천 자격 충족</small></div>
+      <div class="metric"><span>지역별 추천</span><strong id="top-count">—</strong><small>선택 조건 기준</small></div>
+      <div class="metric"><span>마지막 검증 완료</span><strong class="metric-date" id="last-verified">—</strong><small>승인 거래 기준</small></div>
+    </section>
+    <section class="filter-panel" aria-label="탐색 조건">
+      <div class="section-top"><div><div class="eyebrow">EXPLORE</div><h2>조건을 골라보세요</h2></div><button id="reset-btn" class="secondary-button" type="button">초기화</button></div>
+      <div class="filters">
+        <label>지역 <select id="area-filter"><option value="all">전체 지역</option><option value="과천">과천</option><option value="분당">분당 전체</option><option value="금곡동">분당 · 금곡동</option><option value="수내동">분당 · 수내동</option><option value="정자동">분당 · 정자동</option><option value="서현동">분당 · 서현동</option><option value="수지">수지·성복</option><option value="서초">서초·우면</option><option value="강동">강동</option><option value="광교">광교</option><option value="판교">판교</option><option value="동탄">동탄</option></select></label>
+        <label>예산 · 면적 <select id="budget-filter"><option value="20-30-large">부모님 · 20~30억 · 전용 100~135㎡</option><option value="20-30-84">부모님 · 20~30억 · 전용 84㎡</option><option value="15-20-84">15~20억 · 전용 84㎡</option><option value="10-15-84">10~15억 · 전용 84㎡</option></select></label>
+        <label>평가 기준 <select id="sort-filter"><option value="asset">급지·장기 자산가치</option><option value="value">가격 매력도</option><option value="commute">동탄 출퇴근</option><option value="living">실거주 편의성</option></select></label>
+      </div>
+    </section>
+    <section class="result-section">
+      <div class="section-top"><div><div class="eyebrow">VERIFIED TOP FIVE</div><h2 id="top-title">검증된 TOP5</h2><p class="subtext">두 출처와 정상 중개거래를 대조한 후보만 추천에 포함합니다.</p></div><span class="pill">최대 5개</span></div>
+      <div id="top-results" aria-live="polite"></div>
+    </section>
+    <section class="result-section">
+      <div class="section-top"><div><div class="eyebrow">RESEARCH QUEUE</div><h2>검증 대기 관심 후보</h2><p class="subtext">이름과 과거 참고정보는 시세가 아닙니다. 정적정보·실거래를 재검증한 뒤 순위를 부여합니다.</p></div><span id="pending-count" class="pill muted">0개</span></div>
+      <div id="pending-results" class="cards"></div>
+    </section>
+    <section id="detail" class="detail" hidden>
+      <div class="section-top"><div><div class="eyebrow">COMPLEX DETAIL</div><h2 id="detail-title">단지 상세</h2></div><button id="close-detail" type="button" class="secondary-button">닫기</button></div>
+      <div id="detail-content"></div>
+    </section>
+    <section class="guidelines">
+      <div class="section-top"><div><div class="eyebrow">DATA POLICY</div><h2>데이터 검증 원칙</h2></div></div>
+      <div class="rule-grid"><div><strong>01 · 단지 식별</strong><p>도로명·지번·단지 ID·전용면적 타입 대조. 총 500세대 이상.</p></div><div><strong>02 · 2중 확인</strong><p>공공 실거래 기반 정보와 독립 출처의 계약일·층·가격을 대조.</p></div><div><strong>03 · 거래 필터</strong><p>직거래·해제·확인 부족 거래는 정상거래 범위에서 제외.</p></div><div><strong>04 · 24개월 추세</strong><p>검증된 월별 중앙값/실제 거래점만 표시. 공백을 임의로 채우지 않음.</p></div></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap"><strong>Apartment Radar</strong><p>공개 검증 자료 기반 참고용 대시보드. 투자 권유나 확정 시세를 의미하지 않습니다.</p><p>원자료 신고·정정 지연과 비교 타입의 차이를 확인하세요.</p></div></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
