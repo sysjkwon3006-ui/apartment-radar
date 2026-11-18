@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "last_pipeline_run": null,
+  "last_pipeline_run": "2026-11-18T13:04:23+00:00",
   "last_verified_at": null,
-  "message": "초기 후보 등록 완료 · 모든 실거래 이중 검증 대기",
-  "pipeline_state": "awaiting_api_and_second_source",
-  "data_version": "seed-2026-11-17",
+  "message": "국토부 1차 수집 완료 · 매매 3,961건 / 전월세 13,502건 (선택 면적) · 2차 검증 대기",
+  "pipeline_state": "primary_collected_needs_independent_review",
+  "data_version": "molit-2026-11-18",
   "notes": "GitHub 공개 저장소: 소유자 개인정보, 민감정보 또는 API 키를 저장하지 마세요."
 }
