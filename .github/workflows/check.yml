@@ -6,6 +6,9 @@ on:
       - 'scripts/**'
       - 'data/**'
       - '.github/workflows/**'
+      - '*.js'
+      - '*.html'
+      - '*.css'
   pull_request:
   workflow_dispatch:
 permissions:
@@ -23,3 +26,9 @@ jobs:
         run: python -m unittest discover -s scripts -p 'test_*.py' -v
       - name: Strict data approval validation
         run: python scripts/validate.py
+      - name: JavaScript syntax checks
+        run: |
+          node --check app.js
+          node --check explore.js
+          node --check matches.js
+          node --check primary.js
