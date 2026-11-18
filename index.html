@@ -33,6 +33,20 @@
         <label>평가 기준 <select id="sort-filter"><option value="asset">급지·장기 자산가치</option><option value="value">가격 매력도</option><option value="commute">동탄 출퇴근</option><option value="living">실거주 편의성</option></select></label>
       </div>
     </section>
+    <section class="result-section" id="trial-section">
+      <div class="section-top"><div><div class="eyebrow">LIVE RESEARCH · MOLIT FIRST SOURCE ONLY</div><h2>지역별 잠정 TOP5 비교</h2><p class="subtext">국토부 신고·같은 타입 중개거래 3건 이상을 기준으로 한 자료 탐색 순서야. <strong>장기 자산가치 순위나 2중 검증 완료 추천이 아님.</strong></p></div><span id="preview-count" class="pill warning">로딩 중</span></div>
+      <div class="trial-alert"><strong>잠정 자료와 확정 추천을 분리했어.</strong> 단지명·법정동·지번·면적 일치, 중개 여부만 1차 확인한 신고가격이야. 독립 서비스 건별 대조, 전세 신규계약 재검증, 재건축·출퇴근·적정가격 평가를 마치기 전이므로 투자 결론으로 사용하지 마.</div>
+      <div id="preview-top" aria-live="polite"><div class="empty">잠정 실거래 불러오는 중…</div></div>
+      <p id="preview-source-date" class="subtext"></p>
+    </section>
+    <section class="result-section">
+      <div class="section-top"><div><div class="eyebrow">MORE OPTIONS</div><h2>표본 부족 · 추가 조사 후보</h2><p class="subtext">예산에 해당하는 매매가 1~2건뿐이거나 매매 신고가 없는 단지야. 순위를 부여하지 않아.</p></div><span class="pill muted" id="preview-lower-count">—</span></div>
+      <div id="preview-lower"></div>
+    </section>
+    <section id="trial-detail" class="detail" hidden>
+      <div class="section-top"><div><div class="eyebrow">PUBLIC FILINGS · PRELIMINARY</div><h2 id="trial-detail-title">잠정 거래 상세</h2></div><button class="secondary-button" id="trial-close" type="button">닫기</button></div>
+      <div id="trial-detail-body"></div>
+    </section>
     <section class="result-section">
       <div class="section-top"><div><div class="eyebrow">VERIFIED TOP FIVE</div><h2 id="top-title">검증된 TOP5</h2><p class="subtext">두 출처와 정상 중개거래를 대조한 후보만 추천에 포함합니다.</p></div><span class="pill">최대 5개</span></div>
       <div id="top-results" aria-live="polite"></div>
@@ -52,5 +66,6 @@
   </main>
   <footer class="footer"><div class="wrap"><strong>Apartment Radar</strong><p>공개 검증 자료 기반 참고용 대시보드. 투자 권유나 확정 시세를 의미하지 않습니다.</p><p>원자료 신고·정정 지연과 비교 타입의 차이를 확인하세요.</p></div></footer>
   <script src="./app.js" defer></script>
+  <script src="./explore.js" defer></script>
 </body>
 </html>
