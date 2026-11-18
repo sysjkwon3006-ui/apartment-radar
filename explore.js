@@ -12,9 +12,32 @@ const areaMatch=(g,c,a)=>a==="all"||a===g.region||a===g.neighborhood||a===c.neig
 const nameOK=t=>t.match_reason==="exact_lot_area_name";
 const broker=t=>t.record_kind==="sale"&&t.method==="brokered"&&!t.cancelled&&nameOK(t)&&Number.isFinite(t.price_100m);
 const newLease=t=>t.record_kind==="rent"&&t.lease_type==="new"&&t.rent_category==="jeonse"&&nameOK(t)&&Number.isFinite(t.deposit_100m);
+function historyUnitFor(id,area){
+ return S.history?.units?.find(x=>x.complex_id===id&&String(x.registered_area_m2)===String(area));
+}
+function allGroups(){
+ const groups=new Map((S.queue?.candidate_groups||[]).map(g=>[g.complex_id,{...g,units:[...g.units]}]));
+ for(const h of S.history?.units||[]){
+  const c=S.complexes.find(t=>t.id===h.complex_id);if(!c)continue;
+  let g=groups.get(h.complex_id);
+  if(!g){g={complex_id:c.id,registered_name:c.name,region:c.region,neighborhood:c.neighborhood,units:[]};groups.set(c.id,g);}
+  if(!g.units.some(u=>String(u.registered_area_m2)===String(h.registered_area_m2)))
+   g.units.push({registered_area_m2:h.registered_area_m2,sales:[],new_jeonse:[]});
+ }
+ return [...groups.values()];
+}
 function candidate(c,g,u,b){
- const sales=(u.sales||[]).filter(broker).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
- const leases=(u.new_jeonse||[]).filter(newLease).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
+ const h=historyUnitFor(g.complex_id,u.registered_area_m2);
+ const cutoff=new Date();cutoff.setFullYear(cutoff.getFullYear()-1);
+ const from=cutoff.toISOString().slice(0,10);
+ let sales=(u.sales||[]).filter(broker);
+ let leases=(u.new_jeonse||[]).filter(newLease);
+ if(h){
+  sales=h.sales.filter(t=>t.method==="brokered"&&!t.cancelled&&t.date>=from).map(t=>({...t,contract_date:t.date}));
+  leases=h.new_jeonse.filter(t=>t.lease_type==="new"&&t.rent_category==="jeonse"&&t.date>=from).map(t=>({...t,contract_date:t.date}));
+ }
+ sales=sales.sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
+ leases=leases.sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
  const median=med(sales.map(x=>x.price_100m));
  const priceOK=median!==null&&median>=b[0]&&median<=b[1]&&sales.every(t=>t.price_100m<=b[1]);
  return {c,g,u,sales,leases,median,priceOK,date:sales[0]?.contract_date??"",valid:sales.length>=3&&priceOK};
@@ -34,7 +57,7 @@ function render(){
  if(!S.queue)return;
  const area=$("area-filter")?.value||"all",b=buckets[$("budget-filter")?.value]||buckets["20-30-large"];
  let full=[],low=[],unknown=[];
- for(const g of S.queue.candidate_groups||[]){
+ for(const g of allGroups()){
   const c=S.complexes.find(t=>t.id===g.complex_id);
   if(!c||!areaMatch(g,c,area)||!(c.households>=500))continue;
   for(const u of g.units||[]){
@@ -55,7 +78,7 @@ function render(){
  const lower=[...low.slice(0,8),...unknown.slice(0,8)];
  $("preview-lower").innerHTML=lower.length?'<div class="cards">'+lower.map((x,i)=>card(x,i,false)).join("")+'</div>':
  '<div class="empty"><strong>추가 조사 후보 없음</strong><p>해당 지역·면적의 실거래 표본이 제한적입니다.</p></div>';
- $("preview-source-date").textContent="국토부 신고 수집: "+(S.queue.underlying_molit_run||"—").slice(0,10)+" · 최근 3개월 · 독립 2차 검증 전";
+ $("preview-source-date").textContent="국토부 신고 수집: "+(S.queue.underlying_molit_run||"—").slice(0,10)+(S.history?" · 최근 12개월 매매 중 최근 5건 비교 · 24개월 이력 수집":" · 최근 3개월만 확보")+" · 독립 2차 검증 전";
 }
 function txTable(rows,kind){
  if(!rows.length)return'<p class="subtext">해당 종류의 1차 신고 없음</p>';
@@ -73,11 +96,11 @@ function plot(rows){
  return'<svg viewBox="0 0 680 220" width="100%" role="img" aria-label="24개월 틀에서 확보된 최근 3개월 신고점만 표시, 빈 달 보간 없음"><line x1="40" y1="180" x2="640" y2="180" stroke="#c4d0df"/><text x="3" y="40" font-size="12" fill="#657992">'+hi+'억</text><text x="3" y="180" font-size="12" fill="#657992">'+lo+'억</text>'+marks+'</svg>';
 }
 function detail(id,area){
- const g=S.queue.candidate_groups.find(x=>x.complex_id===id);if(!g)return;
+ const g=allGroups().find(x=>x.complex_id===id);if(!g)return;
  const u=g.units.find(x=>String(x.registered_area_m2)===String(area));if(!u)return;
- const c=S.complexes.find(x=>x.id===id),s=(u.sales||[]).filter(broker).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5),l=(u.new_jeonse||[]).filter(newLease).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
+ const c=S.complexes.find(x=>x.id===id),calculated=candidate(c,g,u,buckets[$("budget-filter")?.value]||buckets["20-30-large"]),s=calculated.sales,l=calculated.leases;
  const ratio=s.length&&l.length?100*med(l.map(x=>x.deposit_100m))/med(s.map(x=>x.price_100m)):null;
- const historyUnit=S.history?.units?.find(x=>x.complex_id===id&&String(x.registered_area_m2)===String(area));
+ const historyUnit=historyUnitFor(id,area);
  const historyRows=historyUnit?historyUnit.sales.filter(x=>x.method==="brokered"&&!x.cancelled).map(x=>({contract_date:x.date,price_100m:x.price_100m})):s;
  const historyTitle=historyUnit?"24개월 국토부 신고 월별 중앙값":"24개월 관찰 창 (최근 3개월만 확보)";
  const historyNote=historyUnit?"24개월 공공 신고를 수집했지만 독립 2차 출처의 건별 검증은 아직 없습니다. 빈 달은 집계 기준에 맞는 거래점이 표시되지 않은 달입니다.":"전체 24개월 자료는 아직 수집되지 않았습니다. 빈 달은 미확보 구간입니다.";
