@@ -128,7 +128,7 @@ def build_queue(staging: dict, candidates: dict) -> dict:
         duplicate_registry_locations[key] += 1
 
     groups = {c["id"]: initial_group(c) for c in candidates.get("complexes", [])}
-    stats = Counter()
+    stats = Counter({"provisional_matches": 0, "name_needs_review": 0, "address_area_name_exact": 0, "ambiguous_registry_match": 0, "registered_lot_but_area_unlisted": 0, "not_in_registry": 0})
     conflicts = []
     for r in records:
         stats["staged_rows"] += 1
