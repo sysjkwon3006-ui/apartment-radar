@@ -2,7 +2,7 @@
 /* First-source preview only: never label anything as independently verified. */
 (() => {
 const $=id=>document.getElementById(id);
-const S={queue:null,complexes:[]};
+const S={queue:null,complexes:[],history:null};
 const esc=v=>String(v??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]));
 const fmt=n=>Number.isFinite(n)?n.toLocaleString("ko-KR",{maximumFractionDigits:2})+"억":"미확인";
 const med=arr=>{if(!arr.length)return null;const s=arr.slice().sort((a,b)=>a-b);return s.length%2?s[Math.floor(s.length/2)]:(s[s.length/2-1]+s[s.length/2])/2;};
@@ -77,17 +77,21 @@ function detail(id,area){
  const u=g.units.find(x=>String(x.registered_area_m2)===String(area));if(!u)return;
  const c=S.complexes.find(x=>x.id===id),s=(u.sales||[]).filter(broker).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5),l=(u.new_jeonse||[]).filter(newLease).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
  const ratio=s.length&&l.length?100*med(l.map(x=>x.deposit_100m))/med(s.map(x=>x.price_100m)):null;
+ const historyUnit=S.history?.units?.find(x=>x.complex_id===id&&String(x.registered_area_m2)===String(area));
+ const historyRows=historyUnit?historyUnit.sales.filter(x=>x.method==="brokered"&&!x.cancelled).map(x=>({contract_date:x.date,price_100m:x.price_100m})):s;
+ const historyTitle=historyUnit?"24개월 국토부 신고 월별 중앙값":"24개월 관찰 창 (최근 3개월만 확보)";
+ const historyNote=historyUnit?"24개월 공공 신고를 수집했지만 독립 2차 출처의 건별 검증은 아직 없습니다. 빈 달은 집계 기준에 맞는 거래점이 표시되지 않은 달입니다.":"전체 24개월 자료는 아직 수집되지 않았습니다. 빈 달은 미확보 구간입니다.";
  $("trial-detail-title").textContent=c.name+" · "+area+"㎡";
  $("trial-detail-body").innerHTML='<div class="trial-alert"><b>국토부 1차 자료 · 독립 교차검증 전</b><p>전체 24개월 자료가 아닌 최근 3개월 신고 중 이름·지번·타입이 일치한 거래입니다. 신고 지연·정정에 유의하세요.</p></div>'+
  '<div class="detail-grid"><div class="detail-box"><h3>단지 등록정보 · 검증 대기</h3><dl><dt>주소</dt><dd>'+esc(c.address||"확인 필요")+'</dd><dt>지번</dt><dd>'+esc(c.lot_address||"확인 필요")+'</dd><dt>세대수</dt><dd>'+esc(c.households??"—")+'</dd><dt>준공</dt><dd>'+esc(c.built_year??"—")+'</dd></dl></div>'+
  '<div class="detail-box"><h3>1차 신고가격</h3><dl><dt>중개매매</dt><dd>'+range(s.map(x=>x.price_100m))+'</dd><dt>매매 표본</dt><dd>'+s.length+'건</dd><dt>신규 전세</dt><dd>'+range(l.map(x=>x.deposit_100m))+'</dd><dt>전세 표본</dt><dd>'+l.length+'건</dd><dt>참고 전세가율</dt><dd>'+(ratio!==null?ratio.toFixed(1)+'%':"미산정")+'</dd><dt>관심·적정·추격가격</dt><dd>2차 검증 전 보류</dd></dl></div>'+
  '<div class="detail-box"><h3>중개매매 신고</h3>'+txTable(s,"sale")+'</div><div class="detail-box"><h3>신규 전세 신고</h3>'+txTable(l,"rent")+'</div>'+
- '<div class="detail-box"><h3>24개월 관찰 창 (최근 3개월만 확보)</h3>'+plot(s)+'<p class="subtext">빈 달은 거래가 없었다는 뜻이 아니라 아직 자료가 없다는 뜻입니다.</p></div>'+
+ '<div class="detail-box"><h3>'+historyTitle+'</h3>'+plot(historyRows)+'<p class="subtext">'+historyNote+'</p></div>'+
  '<div class="detail-box"><h3>최종 검증에 필요한 것</h3><p>① 단지 정적정보 2개 독립 출처</p><p>② 매매 계약일·층·면적·가격의 2차 출처 대조</p><p>③ 신규 전세 건별 대조</p><p>④ 이상치·취소 및 동탄 출퇴근 검토</p><p><a href="./matches.html">1차 매칭 원장 보기 →</a></p></div></div>';
  $("trial-detail").hidden=false;$("trial-detail").scrollIntoView({behavior:"smooth",block:"start"});
 }
 ["area-filter","budget-filter","sort-filter"].forEach(id=>$(id)?.addEventListener("change",render));
 document.addEventListener("radar:filters-changed",render);
 document.addEventListener("click",e=>{const b=e.target.closest("[data-preview-id]");if(b)detail(b.dataset.previewId,b.dataset.previewArea);if(e.target.closest("#trial-close"))$("trial-detail").hidden=true;});
-Promise.all([fetch("./data/matches/latest.json",{cache:"no-store"}),fetch("./data/complexes.json",{cache:"no-store"})]).then(async x=>{if(!x.every(r=>r.ok))throw Error("Data HTTP error");const [q,c]=await Promise.all(x.map(r=>r.json()));S.queue=q;S.complexes=c.complexes||[];render();}).catch(err=>{$("preview-top").innerHTML='<div class="empty">잠정 비교 자료 로드 실패. 매칭 작업을 확인하세요.</div>';console.error(err);});
+Promise.all([fetch("./data/matches/latest.json",{cache:"no-store"}),fetch("./data/complexes.json",{cache:"no-store"}),fetch("./data/history/latest.json",{cache:"no-store"})]).then(async x=>{if(!x[0].ok||!x[1].ok)throw Error("Data HTTP error");const [q,c]=await Promise.all([x[0].json(),x[1].json()]);S.queue=q;S.complexes=c.complexes||[];S.history=x[2].ok?await x[2].json():null;render();}).catch(err=>{$("preview-top").innerHTML='<div class="empty">잠정 비교 자료 로드 실패. 매칭 작업을 확인하세요.</div>';console.error(err);});
 })();
