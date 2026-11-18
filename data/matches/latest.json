@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-11-18T13:33:29+00:00",
+  "generated_at_utc": "2026-11-18T13:48:11+00:00",
   "underlying_molit_run": "2026-11-18T13:04:23+00:00",
   "basis": "STAGING ONLY: exact region + legal lot + subtype area; name must also match for exact-name class",
   "disclaimer": "NOT INDEPENDENTLY VERIFIED. No ranking, valuation, or approved transactions derived from this file.",
   "totals": {
     "provisional_matches": 194,
-    "name_needs_review": 63,
-    "address_area_name_exact": 131,
+    "name_needs_review": 0,
+    "address_area_name_exact": 194,
     "ambiguous_registry_match": 0,
     "registered_lot_but_area_unlisted": 189,
     "not_in_registry": 16700,
@@ -954,7 +954,7 @@
             "direct_sales": 0,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
-            "name_conflicts": 26
+            "name_conflicts": 0
           },
           "sales": [
             {
@@ -972,7 +972,7 @@
               "cancelled_on": null,
               "price_100m": 24.9,
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -991,7 +991,7 @@
               "cancelled_on": null,
               "price_100m": 24.7,
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1010,7 +1010,7 @@
               "cancelled_on": null,
               "price_100m": 24.0,
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1029,7 +1029,7 @@
               "cancelled_on": null,
               "price_100m": 24.7,
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1050,7 +1050,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1069,7 +1069,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1088,7 +1088,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1107,7 +1107,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1126,7 +1126,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1147,7 +1147,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1166,7 +1166,7 @@
               "lease_type": "new",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1185,7 +1185,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1204,7 +1204,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1223,7 +1223,7 @@
               "lease_type": "new",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1242,7 +1242,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1261,7 +1261,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1280,7 +1280,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1296,7 +1296,7 @@
             "direct_sales": 0,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
-            "name_conflicts": 5
+            "name_conflicts": 0
           },
           "sales": [],
           "new_jeonse": [
@@ -1315,7 +1315,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 101.93,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1334,7 +1334,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 101.93,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1355,7 +1355,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 101.93,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1374,7 +1374,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 101.93,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1393,7 +1393,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 101.93,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1401,7 +1401,7 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_NAME_REVIEW": 31
+        "exact_lot_area_name": 31
       },
       "provisional_total": 31
     },
@@ -1425,7 +1425,7 @@
             "direct_sales": 1,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
-            "name_conflicts": 22
+            "name_conflicts": 0
           },
           "sales": [
             {
@@ -1443,7 +1443,7 @@
               "cancelled_on": null,
               "price_100m": 21.0,
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1462,7 +1462,7 @@
               "cancelled_on": null,
               "price_100m": 17.2,
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1483,7 +1483,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1502,7 +1502,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1521,7 +1521,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1540,7 +1540,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1559,7 +1559,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1578,7 +1578,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1599,7 +1599,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1618,7 +1618,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1637,7 +1637,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1656,7 +1656,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1675,7 +1675,7 @@
               "lease_type": "new",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1694,7 +1694,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1713,7 +1713,7 @@
               "lease_type": "new",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -1732,7 +1732,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 84.95,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1748,7 +1748,7 @@
             "direct_sales": 0,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
-            "name_conflicts": 2
+            "name_conflicts": 0
           },
           "sales": [],
           "new_jeonse": [
@@ -1767,7 +1767,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 116.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1788,7 +1788,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 116.99,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -1796,7 +1796,7 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_NAME_REVIEW": 24
+        "exact_lot_area_name": 24
       },
       "provisional_total": 24
     },
@@ -2817,7 +2817,7 @@
             "direct_sales": 0,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
-            "name_conflicts": 8
+            "name_conflicts": 0
           },
           "sales": [
             {
@@ -2835,7 +2835,7 @@
               "cancelled_on": null,
               "price_100m": 27.5,
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -2856,7 +2856,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -2875,7 +2875,7 @@
               "lease_type": "new",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -2896,7 +2896,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -2915,7 +2915,7 @@
               "lease_type": "renewal",
               "rent_category": "jeonse",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -2934,7 +2934,7 @@
               "lease_type": "new",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -2953,7 +2953,7 @@
               "lease_type": "new",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             },
@@ -2972,7 +2972,7 @@
               "lease_type": "renewal",
               "rent_category": "monthly_or_unknown",
               "matched_registered_area_m2": 133.82,
-              "match_reason": "exact_lot_area_NAME_REVIEW",
+              "match_reason": "exact_lot_area_name",
               "verification_status": "FIRST_SOURCE_ONLY",
               "independent_source_confirmed": false
             }
@@ -2980,7 +2980,7 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_NAME_REVIEW": 8
+        "exact_lot_area_name": 8
       },
       "provisional_total": 8
     },
