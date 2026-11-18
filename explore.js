@@ -16,7 +16,7 @@ function candidate(c,g,u,b){
  const sales=(u.sales||[]).filter(broker).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
  const leases=(u.new_jeonse||[]).filter(newLease).sort((a,b)=>b.contract_date.localeCompare(a.contract_date)).slice(0,5);
  const median=med(sales.map(x=>x.price_100m));
- const priceOK=median!==null&&median>=b[0]&&median<=b[1];
+ const priceOK=median!==null&&median>=b[0]&&median<=b[1]&&sales.every(t=>t.price_100m<=b[1]);
  return {c,g,u,sales,leases,median,priceOK,date:sales[0]?.contract_date??"",valid:sales.length>=3&&priceOK};
 }
 function card(x,n,full){
