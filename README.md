@@ -32,15 +32,39 @@ scripts/validate.py         # 저장소 데이터 스키마/검증상태 점검
 7. 월별 24개월 그래프는 실제 검증된 거래가 있는 월만 점을 찍고 나머지는 비워둡니다.
 8. `verified=true`는 데이터 구조에 출처 2개와 마지막 검증일·매매·전세 증빙이 있을 때만 유효합니다. (정량 점수는 기준 변경과 함께 공개합니다.)
 
-## 매주 자동화 준비
-GitHub Actions `weekly.yml`은 **토요일 07:15 KST(금요일 22:15 UTC)**에 실행되어 저장소 데이터의 유효성을 점검합니다. API 키/독립출처 연동이 아직 없으므로 **새 거래를 자동으로 수집하거나 검증 완료 처리하지 않습니다.** 이것은 의도적인 안전장치입니다.
+## 국토부 자동 수집 (v0.2)
+수집은 **국토교통부 1차 공공 신고자료**로만 이루어지며, 독립 2차 출처 교차검증을 대체하지 않습니다.
 
-실제 자동 갱신을 위해 별도 작업:
-- 공공데이터포털 서비스키를 GitHub Actions Secret `MOLIT_API_KEY`로 구성
-- 대상 시군구 법정동코드와 단지 식별/동일 타입 매칭 파이프라인 구축
-- 라이선스 및 이용 조건에 맞는 2차 출처 대조·승인 단계 연결
-- 검증 완료 JSON 갱신 및 변경 이력 기록
-- Cloudflare Pages에 GitHub 저장소 연동 (프로젝트 이름 `apartment-radar`, 프레임워크 None, 출력 디렉터리 `/`)
+### 1. API 활용 신청 및 비밀키 등록 (사용자가 수행)
+1. [아파트 매매 실거래가 **상세자료**](https://www.data.go.kr/data/15126468/openapi.do)에서 `활용신청`.
+2. [아파트 **전월세** 실거래가 자료](https://www.data.go.kr/data/15126474/openapi.do)에서도 `활용신청`. 동일 공공데이터 서비스키로 두 서비스에 대한 사용 승인이 있어야 합니다.
+3. [저장소 Actions secrets](https://github.com/sysjkwon3006-ui/apartment-radar/settings/secrets/actions) → **New repository secret** → 이름 `MOLIT_API_KEY` → 공공데이터포털 발급 일반인증키 값을 입력 후 저장. **채팅·커밋·코드·Cloudflare 빌드 변수에 키를 붙여 넣지 마세요.**
+4. [Weekly MOLIT workflow](https://github.com/sysjkwon3006-ui/apartment-radar/actions/workflows/weekly.yml) → **Run workflow** → Branch `main`, `months=3` → **Run workflow**.
+5. 초록색 성공 표시 이후 [국토부 1차 수집 현황](https://apartment-radar.pages.dev/primary.html)에서 지역별 집계/신고내역 확인. 실패하면 GitHub Actions 실행 로그의 **어떤 단계에서 실패했는지** 확인.
+
+GitHub Actions는 **매주 토요일 07:15 KST(금요일 22:15 UTC)** 에 19개 시군구의 **최근 3개월(당월 포함)** 아파트 매매·전월세 자료를 조회하고, 80~90㎡ 및 100~135㎡만 `data/molit/latest.json`에 **1차 수집 상태**로 저장합니다. 마지막 수집 시각은 `data/site-meta.json`에 저장됩니다. 자동으로 `data/complexes.json`의 `verified` 값을 바꾸지 않습니다.
+
+- API 오류, 권한 부족, 누락된 키 또는 페이지 조회 오류 때는 작업이 실패하며 이전 검증된 시세를 덮어쓰지 않습니다.
+- 신고 지연·해제·정정에 대비해 최근 3개월을 매번 재조회합니다.
+- 화성시 동탄구는 2026년 개편 코드 `41597`을 사용합니다. 법정동 코드 변경 때는 `data/regions.json`을 업데이트해야 합니다.
+- 초기 24개월 백필은 추후 **지역별·월별 파일 분할** 및 트래픽/호스팅 크기 점검 후 진행하는 것이 안전합니다. 24개월 전체를 한 파일로 무분별하게 수집하지 마세요.
+- **검증 기준:** 국토부 자료 + 허가된 독립 서비스의 계약일·층·면적·가격 대조, 취소·직거래 제외, 신규 전세 확인, 동일 주소/지번/타입 매칭 후에만 TOP5에 반영합니다.
+- 검증 테스트: `python -m unittest discover -s scripts -p 'test_*.py' -v`, 승인자료 검증: `python scripts/validate.py`.
+
+### 코드·데이터 경로
+```
+index.html                        # 지역별 TOP5 (확정 데이터만)
+primary.html / primary.js         # 국토부 1차 수집 현황 (미검증)
+data/regions.json                 # 현행 법정동코드 19개
+data/molit/latest.json            # 성공적인 첫 수집 이후 생성 (1차 자료)
+data/site-meta.json               # 마지막 실행/승인 시각을 구분
+scripts/collect_molit.py          # XML API 조회·페이지네이션·정규화
+scripts/test_molit.py             # 네트워크 없는 가상 응답 테스트
+.github/workflows/weekly.yml     # 토요일 수집, 성공 시 변경사항 커밋
+.github/workflows/check.yml      # 코드·데이터 변경 시 오프라인 검사
+```
+
+**단계 구분:** 사이트가 정상 배포되었다고 API가 연결된 것은 아닙니다. Secret 등록과 첫 workflow 실행 성공까지는 **자동 수집 미가동** 상태입니다.
 
 ## 주의
 - **GitHub repository가 Public 상태**이므로 코드와 `data/` 정보가 공개됩니다. API 키·계정정보·비공개 내부정보를 커밋하지 마세요.
