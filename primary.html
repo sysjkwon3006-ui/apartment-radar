@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Apartment Radar | 국토부 1차 수집 현황</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+.report-head{padding:36px 0 10px}.report-head h1{font-size:clamp(24px,4vw,36px);margin:4px 0}.warning-box{padding:17px 20px;border-radius:12px;background:#fff9e8;border:1px solid #efdcac;color:#68511b;font-size:13px;margin:18px 0}.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.summary-grid>div{background:white;border:1px solid #e0e8f3;border-radius:12px;padding:16px}.summary-grid strong{display:block;font-size:22px}.summary-grid span{font-size:12px;color:#64748b}.filter-row{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.filter-row select{padding:10px;border:1px solid #d3deed;border-radius:8px;background:white;color:#243a54}.table-scroll{overflow:auto}.primary-table{border-collapse:collapse;width:100%;min-width:760px;font-size:12px}.primary-table th,.primary-table td{padding:10px 8px;border-bottom:1px solid #e5ebf2;text-align:left;white-space:nowrap}.primary-table th{color:#526580;background:#f8fafd}.primary-table .number{text-align:right;font-variant-numeric:tabular-nums}.panel{background:white;border:1px solid #e0e8f2;border-radius:14px;padding:20px;margin:20px 0}.panel h2{margin:0 0 8px;font-size:18px}.panel p{font-size:12px;color:#6b7d91}.navback{display:inline-block;margin-bottom:8px;font-size:13px;font-weight:700}.status-danger{color:#994312}.status-good{color:#23765d}
+@media(max-width:680px){.summary-grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header class="site-header"><div class="wrap header-flex"><div class="brand"><span class="logo">⌂</span><span>Apartment <strong>Radar</strong></span></div><a class="text-btn" href="./index.html">TOP5 대시보드 돌아가기</a></div></header>
+<main class="wrap">
+<section class="report-head"><div class="eyebrow">PRIMARY-SOURCE STAGING</div><h1>국토부 1차 실거래 수집 현황</h1><p>매매·전월세 API로 수집한 신고 자료를 확인하는 화면입니다. <strong>아직 독립 2차 출처와 대조하지 않았으며 TOP5에는 반영되지 않습니다.</strong></p></section>
+<div class="warning-box"><strong>주의 · 1차 신고 자료입니다.</strong> 직거래·해제·갱신계약·이상치가 섞일 수 있습니다. 단지명은 동명이단지 검증 전 원문이고, 이 화면의 거래가가 매수 추천가격이라는 뜻은 아닙니다.</div>
+<div class="summary-grid"><div><span>마지막 국토부 수집 시각 (KST)</span><strong id="at">—</strong></div><div><span>매매 신고 · 관심 면적</span><strong id="sales">—</strong></div><div><span>전월세 신고 · 관심 면적</span><strong id="rents">—</strong></div></div>
+<section class="panel"><h2>지역별 수집 결과</h2><p>전용 80~90㎡ 또는 100~135㎡만 집계합니다. 지역 전체 계약건수와 다릅니다.</p><div id="region-table" class="table-scroll">자료 대기 중</div></section>
+<section class="panel"><h2>신고 원자료 미리보기</h2><p>최신 100건 표시 · 취소와 직거래도 필터를 걸지 않고 명시합니다. 동일 이름의 단지일 수 있으므로 매칭에 사용하지 마세요.</p>
+<div class="filter-row"><label>지역 <select id="r-filter"><option value="all">전체</option></select></label><label>유형 <select id="t-filter"><option value="all">매매+전월세</option><option value="sale">매매</option><option value="rent">전월세</option></select></label><label>계약월 <select id="m-filter"><option value="all">전체</option></select></label></div>
+<div id="records-table" class="table-scroll">자료 대기 중</div></section>
+<p class="subtext">원본 출처: <a href="https://www.data.go.kr/data/15126468/openapi.do" target="_blank" rel="noopener noreferrer">국토부 아파트 매매 상세 API</a>, <a href="https://www.data.go.kr/data/15126474/openapi.do" target="_blank" rel="noopener noreferrer">국토부 아파트 전월세 API</a>. 공공 신고자료는 해제·정정 및 신고 지연이 발생할 수 있습니다.</p>
+</main><footer class="footer"><div class="wrap">Apartment Radar · 공개 데이터 기반, 2차 검증 전 매수판단 금지</div></footer>
+<script src="./primary.js" defer></script>
+</body></html>
