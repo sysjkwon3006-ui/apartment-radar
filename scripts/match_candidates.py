@@ -26,7 +26,7 @@ REGION_CODES = {
     "강남": "11680", "송파": "11710", "강동": "11740",
     "동탄": "41597",
 }
-AREA_TOLERANCE = 0.02  # sqm, identical subtype only; not broad "84㎡" matching
+AREA_TOLERANCE = 0.009  # sqm, cautious rounding allowance (<0.01); no broad 84㎡ grouping
 SAMPLE_LIMIT = 8
 
 
