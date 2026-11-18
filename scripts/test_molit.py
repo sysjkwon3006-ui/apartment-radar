@@ -4,21 +4,21 @@ import unittest
 import collect_molit as m
 
 
-SALE_XML = b"""<?xml version="1.0" encoding="UTF-8"?>
+SALE_XML = """<?xml version="1.0" encoding="UTF-8"?>
 <response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header>
 <body><items><item><aptNm>Example Complex</aptNm><dealAmount>185,000</dealAmount>
 <dealYear>2026</dealYear><dealMonth>10</dealMonth><dealDay>15</dealDay>
 <excluUseAr>84.91</excluUseAr><floor>12</floor><dealingGbn>중개거래</dealingGbn>
 <jibun>789</jibun><umdNm>성복동</umdNm></item></items>
-<numOfRows>1000</numOfRows><pageNo>1</pageNo><totalCount>1</totalCount></body></response>""".decode().encode()
+<numOfRows>1000</numOfRows><pageNo>1</pageNo><totalCount>1</totalCount></body></response>""".encode("utf-8")
 
-RENT_XML = b"""<?xml version="1.0" encoding="UTF-8"?>
+RENT_XML = """<?xml version="1.0" encoding="UTF-8"?>
 <response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header>
 <body><items><item><aptNm>Example Complex</aptNm><deposit>90,000</deposit>
 <monthlyRent>0</monthlyRent><contractType>신규</contractType>
 <dealYear>2026</dealYear><dealMonth>10</dealMonth><dealDay>19</dealDay>
 <excluUseAr>84.91</excluUseAr><floor>10</floor><jibun>789</jibun></item></items>
-<totalCount>1</totalCount></body></response>""".decode().encode()
+<totalCount>1</totalCount></body></response>""".encode("utf-8")
 
 
 class MolicCollectorTests(unittest.TestCase):
