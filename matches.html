@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="국토부 1차 신고자료와 후보 단지의 지번·전용면적을 엄격히 대조한 매칭 검토 대기열. 2차 출처 검증 전입니다.">
+<title>Apartment Radar | 단지 매칭 검토</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+.review-hero{padding:40px 0 12px}.review-hero h1{font-size:clamp(25px,4.5vw,39px);margin:8px 0;letter-spacing:-1.3px}
+.review-intro{color:#526580;max-width:850px;font-size:14px}
+.warn{padding:17px;border:1px solid #eadcad;background:#fff9e9;color:#685122;border-radius:11px;margin:16px 0;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+.stats>div,.unit,.review{background:white;border:1px solid #dfE6f0;border-radius:13px;padding:16px}
+.stats small{display:block;color:#6d7f98;font-size:11px}.stats strong{font-size:26px}
+.filters-inline{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;align-items:center}
+.filters-inline label{font-size:12px;color:#465d7c;display:flex;gap:7px;align-items:center}
+.filters-inline select,.filters-inline input{padding:10px;background:white;border:1px solid #ced8e8;border-radius:8px;color:#243c60;min-width:160px}
+.review-list{display:grid;gap:13px;margin:20px 0}.review h2{font-size:17px;margin:4px 0}.review .desc{font-size:12px;color:#6c7d92;margin:4px 0 15px}
+.units{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}
+.unit{background:#f9fbff;padding:13px}.unit h3{margin:0 0 6px;font-size:13px}
+.unit p{margin:3px 0;color:#526581;font-size:11px}.unit button{border:1px solid #d6e0ee;border-radius:7px;color:#275e9d;background:white;padding:7px 10px;font-weight:700;font-size:12px;margin-top:8px;cursor:pointer}
+details{margin-top:12px;border:1px solid #e1e8f2;border-radius:10px;padding:12px;overflow:auto}summary{cursor:pointer;font-size:13px;font-weight:700}
+.table-scroll{overflow:auto}.tx-table{width:100%;min-width:650px;border-collapse:collapse;font-size:12px}
+.tx-table th,.tx-table td{padding:8px;border-bottom:1px solid #e5ecf5;text-align:left;white-space:nowrap}.tx-table th{color:#5d708c}.tx-table td.amount{text-align:right;font-variant-numeric:tabular-nums}
+.notes{color:#516884;font-size:12px}.notes b{color:#273e60}.empty-state{padding:28px;border-radius:13px;border:1px dashed #c9d6e8;background:#f8fbff;color:#657992}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.filters-inline label{width:100%;justify-content:space-between}.filters-inline select,.filters-inline input{flex:1;min-width:0}}
+</style>
+</head><body>
+<header class="site-header"><div class="wrap header-flex"><div class="brand"><span class="logo">⌂</span><span>Apartment <strong>Radar</strong></span></div><a class="text-btn" href="./index.html">TOP5 메인으로</a></div></header>
+<main class="wrap">
+<section class="review-hero">
+<div class="eyebrow">CANDIDATE MATCH REVIEW · PHASE 2</div>
+<h1>단지별 거래 매칭 검토</h1>
+<p class="review-intro">국토부 신고자료와 등록 후보의 <b>시군구코드·법정동·정확한 지번·전용면적 타입</b>을 대조합니다. 단지명이 일치하는지 따로 확인하며, 원장에 없는 주소는 추측하지 않습니다.</p>
+<p class="notes" id="generated-at">매칭 생성 시각 확인 중…</p>
+</section>
+<div class="warn"><b>중요: 모두 1차 매칭 후보이며, 확정 실거래·추천 가격이 아닙니다.</b> 2차 출처 대조와 단지 정적 정보 검증이 끝나기 전에는 TOP5에 반영하지 않습니다. 동명이단지·세부면적 혼동, 취소·직거래·갱신계약을 재검토하세요.</div>
+<div class="stats" aria-label="매칭 요약">
+<div><small>수집 신고 총건</small><strong id="total-records">—</strong></div>
+<div><small>주소·면적 후보 매칭</small><strong id="match-count">—</strong></div>
+<div><small>잠정 매칭 단지 수</small><strong id="complex-count">—</strong></div>
+<div><small>단지명 추가 확인</small><strong id="name-review">—</strong></div>
+</div>
+<section class="result-section">
+<div class="section-top"><div><div class="eyebrow">FILTER</div><h2>매칭 후보 직접 살펴보기</h2><p class="subtext">주소·면적만 일치한 거래와 단지명도 일치한 거래를 구분해 보여줍니다.</p></div></div>
+<div class="filters-inline">
+<label>지역 <select id="region-filter"><option value="all">전체 지역</option></select></label>
+<label>단지 검색 <input id="name-filter" placeholder="예: 금곡동, 양지마을"></label>
+<label>표시 <select id="status-filter"><option value="all">전체 검토 대상</option><option value="needs_name_review">단지명 추가 확인 있음</option><option value="exact_name">단지명 일치 기록 있음</option></select></label>
+</div>
+<div id="results" class="review-list"><div class="empty-state">검토 자료 로딩 중…</div></div>
+</section>
+<section class="result-section">
+<div class="section-top"><div><div class="eyebrow">RESEARCH GAPS</div><h2>매칭이 불가능했던 단지</h2></div></div>
+<div id="missing-list" class="notes">데이터 조회 중…</div>
+<p class="notes">이 목록은 시세 0건이라는 의미가 아니라 **등록된 정확한 지번 등이 부족해 안전하게 매칭하지 못한 후보**야.</p>
+</section>
+<section class="result-section">
+<div class="section-top"><div><div class="eyebrow">SECOND-SOURCE REVIEW</div><h2>TOP5 반영 전 검증 단계</h2></div></div>
+<p class="notes">각 후보에 대해 ① KB·공공 단지정보 등 두 출처로 정적 정보 확인 ② 국토부 거래와 독립 서비스 건별 계약일·층·면적·가격 대조 ③ 직거래·해제·특수조건 제외 ④ 신규 전세 3~5건 대조를 거쳐야 해. 자료가 부족하면 순위를 채우지 않아.</p>
+</section>
+</main>
+<footer class="footer"><div class="wrap">Apartment Radar · 1차 공공 신고자료의 검토 화면 · 투자 판단용 확정 시세 아님</div></footer>
+<script src="./matches.js" defer></script>
+</body></html>
