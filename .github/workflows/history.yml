@@ -1,0 +1,50 @@
+name: 24-month candidate history backfill
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/history.yml'
+  schedule:
+    # Saturday 07:45 Korea time (Friday 22:45 UTC)
+    - cron: '45 22 * * 5'
+permissions:
+  contents: write
+concurrency:
+  group: apartment-radar-history-backfill
+  cancel-in-progress: false
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Strict baseline tests
+        run: |
+          python -m unittest discover -s scripts -p 'test_*.py' -v
+          python scripts/validate.py
+      - name: Collect 24 months for registered exact lots and subtypes
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
+        run: python scripts/backfill_history.py --months 24
+      - name: Publish historical FIRST-SOURCE data only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/history/latest.json
+          if git diff --cached --quiet; then
+            echo 'History unchanged'
+          else
+            git commit -m 'data: refresh 24-month MOLIT history (unverified)'
+            git push origin main
+          fi
+      - name: State verification boundary
+        run: echo 'Historical points are MOLIT first-source only. Independent verification remains pending.'
