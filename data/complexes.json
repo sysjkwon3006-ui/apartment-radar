@@ -76,7 +76,7 @@
       "verification": {
         "status": "pending",
         "checked_at": null,
-        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외. 명칭의 등재 별칭만 교차확인. 면적·건별 시세는 계속 pending."
       },
       "static_sources": [],
       "sales_sources": [],
@@ -98,7 +98,24 @@
       },
       "commute_note": "동탄 실제 출퇴근 경로 미측정",
       "pros": "검증 후 추가",
-      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요",
+      "verified_aliases": [
+        "센트럴파크푸르지오써밋"
+      ],
+      "alias_evidence": [
+        {
+          "organization": "property_registry_A",
+          "url": "https://mola.kr/transactions/apartments/f8bd65be-59c3-4e57-aab7-d4d9ef37a579",
+          "checked_on": "2026-11-18",
+          "purpose": "same legal lot; name alias only, NOT transaction verification"
+        },
+        {
+          "organization": "property_registry_B",
+          "url": "https://statnorth.kr/apt/%EA%B2%BD%EA%B8%B0/%EA%B3%BC%EC%B2%9C%EC%8B%9C/%EB%B6%80%EB%A6%BC%EB%8F%99-%EC%84%BC%ED%8A%B8%EB%9F%B4%ED%8C%8C%ED%81%AC%ED%91%B8%EB%A5%B4%EC%A7%80%EC%98%A4%EC%8D%A8%EB%B0%8B-768749e0c0fd",
+          "checked_on": "2026-11-18",
+          "purpose": "same legal lot; name alias only, NOT transaction verification"
+        }
+      ]
     },
     {
       "id": "gw-raemian",
@@ -127,7 +144,7 @@
       "verification": {
         "status": "pending",
         "checked_at": null,
-        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외. 명칭의 등재 별칭만 교차확인. 면적·건별 시세는 계속 pending."
       },
       "static_sources": [],
       "sales_sources": [],
@@ -149,7 +166,24 @@
       },
       "commute_note": "동탄 실제 출퇴근 경로 미측정",
       "pros": "검증 후 추가",
-      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요",
+      "verified_aliases": [
+        "래미안슈르"
+      ],
+      "alias_evidence": [
+        {
+          "organization": "property_registry_A",
+          "url": "https://kbland.kr/se/c/15555",
+          "checked_on": "2026-11-18",
+          "purpose": "same legal lot; name alias only, NOT transaction verification"
+        },
+        {
+          "organization": "property_registry_B",
+          "url": "https://mola.kr/transactions/apartments/863502fd-efe7-480c-accc-98aae958790a",
+          "checked_on": "2026-11-18",
+          "purpose": "same legal lot; name alias only, NOT transaction verification"
+        }
+      ]
     },
     {
       "id": "gw-prugio",
@@ -287,7 +321,7 @@
       "verification": {
         "status": "pending",
         "checked_at": null,
-        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외."
+        "notes": "이전 보고서의 참고 단지. 현재 저장소에 최신 2개 독립 출처 증빙/거래내역이 없어 확정 추천 제외. 명칭의 등재 별칭만 교차확인. 면적·건별 시세는 계속 pending."
       },
       "static_sources": [],
       "sales_sources": [],
@@ -309,7 +343,24 @@
       },
       "commute_note": "동탄 실제 출퇴근 경로 미측정",
       "pros": "검증 후 추가",
-      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요"
+      "cons": "동/층/향, 유지보수, 거래 조건 등 추가 검증 필요",
+      "verified_aliases": [
+        "양지마을(금호1)"
+      ],
+      "alias_evidence": [
+        {
+          "organization": "property_registry_A",
+          "url": "https://kbland.kr/se/c/323936",
+          "checked_on": "2026-11-18",
+          "purpose": "same legal lot; name alias only, NOT transaction verification"
+        },
+        {
+          "organization": "property_registry_B",
+          "url": "https://apt.k9gle.com/apt/4520/%EC%88%98%EB%82%B4%EB%8F%99-%EC%96%91%EC%A7%80%EB%A7%88%EC%9D%84-%EA%B8%88%ED%98%B81",
+          "checked_on": "2026-11-18",
+          "purpose": "same legal lot; name alias only, NOT transaction verification"
+        }
+      ]
     },
     {
       "id": "bd-parktown",
