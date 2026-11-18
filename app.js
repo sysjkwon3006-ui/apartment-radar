@@ -49,6 +49,7 @@ function render(){
  $('pending-count').textContent=pending.length+"개";
  $('pending-results').innerHTML=pending.length?pending.map(c=>card(c,true)).join(""):'<div class="empty"><strong>등록된 대기 후보가 없습니다.</strong><p>지역 후보를 확장하려면 공개자료로 정적정보부터 확인해야 합니다.</p></div>';
  $('detail').hidden=true;
+ document.dispatchEvent(new Event('radar:filters-changed'));
 }
 async function start(){
  const r=await Promise.all([fetch("./data/complexes.json",{cache:"no-store"}),fetch("./data/site-meta.json",{cache:"no-store"})]);
