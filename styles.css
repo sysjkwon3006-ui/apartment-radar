@@ -8,3 +8,14 @@
 .detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.detail-box{padding:16px;border:1px solid #e0e8f2;border-radius:12px}.detail-box h3{font-size:14px;margin:0 0 12px}.detail-box dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:12px}.detail-box dt{color:#687b94}.detail-box dd{margin:0;text-align:right;font-weight:750}.detail-box p,.detail-box li{font-size:12px;color:#64748a}.tx-table{width:100%;border-collapse:collapse;font-size:12px}.tx-table th,.tx-table td{padding:8px 4px;border-bottom:1px solid #e8edf4;text-align:right}.tx-table th:first-child,.tx-table td:first-child{text-align:left}.chart-wrap{min-height:170px}.chart-wrap svg{display:block;width:100%;height:auto}.empty-chart{font-size:12px;color:#73849c;padding:30px 10px;text-align:center;background:#f8fafc;border-radius:10px}
 .footer{padding:36px 0 48px;color:#687b96}.footer strong{font-size:14px}.footer p{font-size:11px;margin:4px 0}
 @media(max-width:760px){.micro{display:none}.hero{padding:40px 0 20px}.metrics{grid-template-columns:repeat(2,1fr)}.filters,.cards,.detail-grid,.rule-grid{grid-template-columns:1fr}.filter-panel,.result-section,.detail,.guidelines{padding:17px}.metric{padding:13px}.metric strong{font-size:22px}.section-top h2{font-size:19px}}
+/* First-source comparison - intentionally distinct from verified cards */
+.trial-card{border-color:#eadbae;background:#fffefa}
+.trial-price{font-weight:800;font-size:22px;color:#223b5d;margin-top:12px;letter-spacing:-.4px}
+.trial-area{font-size:12px;color:#6c7f99;font-weight:500;white-space:nowrap}
+.trial-alert{border:1px solid #e4d1a2;background:#fff9e8;border-radius:11px;padding:15px 18px;font-size:12px;color:#765b26;margin:10px 0 20px}
+.trial-alert p{margin:6px 0 0;color:#715e38}
+.trial-warning{color:#9e6b17!important;font-weight:600}
+.trial-card .pill.warning{background:#fff1d2;border-color:#efd8a1;color:#8b6418}
+.trial-card .card-foot{align-items:center}
+.trial-card small{font-size:10px;color:#8c96a5}
+.trial-chart svg{display:block;width:100%;max-width:100%}
