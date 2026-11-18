@@ -1,40 +1,24 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-11-18T13:28:45+00:00",
+  "generated_at_utc": "2026-11-18T13:33:29+00:00",
   "underlying_molit_run": "2026-11-18T13:04:23+00:00",
   "basis": "STAGING ONLY: exact region + legal lot + subtype area; name must also match for exact-name class",
   "disclaimer": "NOT INDEPENDENTLY VERIFIED. No ranking, valuation, or approved transactions derived from this file.",
   "totals": {
-    "provisional_matches": 192,
+    "provisional_matches": 194,
     "name_needs_review": 63,
-    "address_area_name_exact": 129,
+    "address_area_name_exact": 131,
     "ambiguous_registry_match": 0,
-    "registered_lot_but_area_unlisted": 177,
-    "not_in_registry": 16714,
+    "registered_lot_but_area_unlisted": 189,
+    "not_in_registry": 16700,
     "staged_rows": 17463,
     "raw_missing_lot": 380,
     "registry_candidates": 18,
-    "registry_without_exact_lot": 3,
-    "provisional_complexes_with_rows": 15,
+    "registry_without_exact_lot": 0,
+    "provisional_complexes_with_rows": 17,
     "secondary_source_verified": 0
   },
-  "missing_registry_keys": [
-    {
-      "complex_id": "gw-prugio",
-      "name": "과천푸르지오써밋",
-      "reason": "missing_region_or_exact_lot"
-    },
-    {
-      "complex_id": "bd-cheongsol",
-      "name": "청솔마을8단지대원",
-      "reason": "missing_region_or_exact_lot"
-    },
-    {
-      "complex_id": "bd-doosan",
-      "name": "두산위브트레지움",
-      "reason": "missing_region_or_exact_lot"
-    }
-  ],
+  "missing_registry_keys": [],
   "potential_registry_lot_collisions": [],
   "sample_conflicts": [
     {
@@ -218,6 +202,13 @@
       "lot": "상일동 514",
       "raw_apartment": "고덕롯데캐슬베네루체",
       "raw_area": 84.146
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41135",
+      "lot": "금곡동 141",
+      "raw_apartment": "청솔마을(대원)",
+      "raw_area": 84.97
     },
     {
       "reason": "registered_lot_but_area_unlisted",
@@ -449,13 +440,6 @@
       "lot": "성복동 819",
       "raw_apartment": "성복역롯데캐슬클라시엘",
       "raw_area": 101.82
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41290",
-      "lot": "원문동 4",
-      "raw_apartment": "래미안슈르",
-      "raw_area": 84.964
     }
   ],
   "candidate_groups": [
@@ -4069,6 +4053,110 @@
         "exact_lot_area_name": 2
       },
       "provisional_total": 2
+    },
+    {
+      "complex_id": "bd-doosan",
+      "registered_name": "두산위브트레지움",
+      "region": "분당",
+      "neighborhood": "금곡동",
+      "lot_address": "금곡동 192",
+      "households_from_pending_registry": 656,
+      "static_information_verified": false,
+      "status": "NEEDS_INDEPENDENT_REVIEW",
+      "units": [
+        {
+          "registered_area_m2": 120.14,
+          "counts": {
+            "sales": 1,
+            "new_jeonse": 0,
+            "other_rent": 0,
+            "brokered_sales": 1,
+            "direct_sales": 0,
+            "cancelled_sales": 0,
+            "unknown_sale_method": 0,
+            "name_conflicts": 0
+          },
+          "sales": [
+            {
+              "provisional_record_hash": "2ddb7a0e24b62d77234b39ad",
+              "contract_date": "2026-09-12",
+              "apartment_name": "두산위브트레지움",
+              "legal_dong": "금곡동",
+              "jibun": "192",
+              "apartment_seq": "41135-235",
+              "area_m2": 120.14,
+              "floor": 10,
+              "record_kind": "sale",
+              "method": "brokered",
+              "cancelled": false,
+              "cancelled_on": null,
+              "price_100m": 19.0,
+              "matched_registered_area_m2": 120.14,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            }
+          ],
+          "new_jeonse": [],
+          "other_rent": []
+        }
+      ],
+      "match_reasons": {
+        "exact_lot_area_name": 1
+      },
+      "provisional_total": 1
+    },
+    {
+      "complex_id": "bd-cheongsol",
+      "registered_name": "청솔마을8단지대원",
+      "region": "분당",
+      "neighborhood": "금곡동",
+      "lot_address": "금곡동 141",
+      "households_from_pending_registry": 820,
+      "static_information_verified": false,
+      "status": "NEEDS_INDEPENDENT_REVIEW",
+      "units": [
+        {
+          "registered_area_m2": 129.45,
+          "counts": {
+            "sales": 1,
+            "new_jeonse": 0,
+            "other_rent": 0,
+            "brokered_sales": 1,
+            "direct_sales": 0,
+            "cancelled_sales": 0,
+            "unknown_sale_method": 0,
+            "name_conflicts": 0
+          },
+          "sales": [
+            {
+              "provisional_record_hash": "f41708ea8f62b4b1552b0be1",
+              "contract_date": "2026-10-05",
+              "apartment_name": "청솔마을(대원)",
+              "legal_dong": "금곡동",
+              "jibun": "141",
+              "apartment_seq": "41135-152",
+              "area_m2": 129.45,
+              "floor": 12,
+              "record_kind": "sale",
+              "method": "brokered",
+              "cancelled": false,
+              "cancelled_on": null,
+              "price_100m": 21.3,
+              "matched_registered_area_m2": 129.45,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            }
+          ],
+          "new_jeonse": [],
+          "other_rent": []
+        }
+      ],
+      "match_reasons": {
+        "exact_lot_area_name": 1
+      },
+      "provisional_total": 1
     }
   ]
 }
