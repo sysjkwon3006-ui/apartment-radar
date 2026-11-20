@@ -172,7 +172,7 @@ def main():
     }
     summary_path = args.output.parent / "summary.json"
     summary_tmp = summary_path.with_suffix(".tmp")
-    summary_tmp.write_text(json.dumps(summary, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
+    summary_tmp.write_text(json.dumps(summary, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     summary_tmp.replace(summary_path)
     print(f"Discovery: {len(index['entries'])} unverified exact-apartment/subtype groups from {len(staging['records'])} staged records")
     print("No household-size or independent-source evidence inferred.")
