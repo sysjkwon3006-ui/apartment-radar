@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-11-20T07:46:35+00:00",
-  "underlying_molit_run": "2026-11-20T07:46:35+00:00",
+  "generated_at_utc": "2026-11-20T23:01:56+00:00",
+  "underlying_molit_run": "2026-11-20T23:01:56+00:00",
   "basis": "STAGING ONLY: exact region + legal lot + subtype area; name must also match for exact-name class",
   "disclaimer": "NOT INDEPENDENTLY VERIFIED. No ranking, valuation, or approved transactions derived from this file.",
   "totals": {
-    "provisional_matches": 200,
+    "provisional_matches": 202,
     "name_needs_review": 0,
-    "address_area_name_exact": 200,
+    "address_area_name_exact": 202,
     "ambiguous_registry_match": 0,
-    "registered_lot_but_area_unlisted": 197,
-    "not_in_registry": 32899,
-    "staged_rows": 35460,
-    "raw_missing_lot": 2164,
+    "registered_lot_but_area_unlisted": 204,
+    "not_in_registry": 33488,
+    "staged_rows": 36100,
+    "raw_missing_lot": 2206,
     "registry_candidates": 18,
     "registry_without_exact_lot": 0,
     "provisional_complexes_with_rows": 17,
@@ -21,6 +21,20 @@
   "missing_registry_keys": [],
   "potential_registry_lot_collisions": [],
   "sample_conflicts": [
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41290",
+      "lot": "원문동 4",
+      "raw_apartment": "래미안슈르",
+      "raw_area": 84.961
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "11650",
+      "lot": "우면동 773",
+      "raw_apartment": "서초힐스",
+      "raw_area": 84.95
+    },
     {
       "reason": "registered_lot_but_area_unlisted",
       "region_code": "41135",
@@ -80,6 +94,13 @@
     {
       "reason": "registered_lot_but_area_unlisted",
       "region_code": "41290",
+      "lot": "갈현동 824",
+      "raw_apartment": "과천푸르지오벨라르테",
+      "raw_area": 84.0
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41290",
       "lot": "원문동 4",
       "raw_apartment": "래미안슈르",
       "raw_area": 84.961
@@ -114,6 +135,13 @@
     },
     {
       "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41290",
+      "lot": "원문동 4",
+      "raw_apartment": "래미안슈르",
+      "raw_area": 84.961
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
       "region_code": "41135",
       "lot": "정자동 121",
       "raw_apartment": "상록마을(우성)1",
@@ -139,6 +167,13 @@
       "lot": "원문동 4",
       "raw_apartment": "래미안슈르",
       "raw_area": 84.961
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41135",
+      "lot": "금곡동 141",
+      "raw_apartment": "청솔마을(대원)",
+      "raw_area": 84.97
     },
     {
       "reason": "registered_lot_but_area_unlisted",
@@ -405,41 +440,6 @@
       "lot": "성복동 789",
       "raw_apartment": "성복역롯데캐슬골드타운",
       "raw_area": 84.9979
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41290",
-      "lot": "원문동 4",
-      "raw_apartment": "래미안슈르",
-      "raw_area": 84.964
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41135",
-      "lot": "수내동 55",
-      "raw_apartment": "파크타운(롯데)",
-      "raw_area": 134.413
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41135",
-      "lot": "수내동 36",
-      "raw_apartment": "양지마을(2단지)(청구)",
-      "raw_area": 84.6
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41290",
-      "lot": "원문동 4",
-      "raw_apartment": "래미안슈르",
-      "raw_area": 84.0
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41465",
-      "lot": "성복동 789",
-      "raw_apartment": "성복역롯데캐슬골드타운",
-      "raw_area": 84.9979
     }
   ],
   "candidate_groups": [
@@ -478,7 +478,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.9,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -497,7 +496,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.0,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -516,7 +514,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.9,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -535,7 +532,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.4,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -554,7 +550,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.1,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -573,7 +568,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.5,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -592,7 +586,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.2,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -611,7 +604,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.4,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -969,7 +961,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 24.9,
               "matched_registered_area_m2": 84.99,
               "match_reason": "exact_lot_area_name",
@@ -988,7 +979,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 24.9,
               "matched_registered_area_m2": 84.99,
               "match_reason": "exact_lot_area_name",
@@ -1007,7 +997,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 24.7,
               "matched_registered_area_m2": 84.99,
               "match_reason": "exact_lot_area_name",
@@ -1026,7 +1015,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 24.0,
               "matched_registered_area_m2": 84.99,
               "match_reason": "exact_lot_area_name",
@@ -1045,7 +1033,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 24.7,
               "matched_registered_area_m2": 84.99,
               "match_reason": "exact_lot_area_name",
@@ -1476,7 +1463,7 @@
           "registered_area_m2": 84.95,
           "counts": {
             "sales": 2,
-            "new_jeonse": 6,
+            "new_jeonse": 7,
             "other_rent": 14,
             "brokered_sales": 1,
             "direct_sales": 1,
@@ -1497,7 +1484,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 21.0,
               "matched_registered_area_m2": 84.95,
               "match_reason": "exact_lot_area_name",
@@ -1516,7 +1502,6 @@
               "record_kind": "sale",
               "method": "direct",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 17.2,
               "matched_registered_area_m2": 84.95,
               "match_reason": "exact_lot_area_name",
@@ -1612,6 +1597,25 @@
               "floor": 10,
               "record_kind": "rent",
               "deposit_100m": 8.5,
+              "monthly_rent_10k_krw": 0,
+              "lease_type": "new",
+              "rent_category": "jeonse",
+              "matched_registered_area_m2": 84.95,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
+            {
+              "provisional_record_hash": "a5f5af7ad5c7f07b490368c8",
+              "contract_date": "2026-09-19",
+              "apartment_name": "래미안슈르",
+              "legal_dong": "원문동",
+              "jibun": "4",
+              "apartment_seq": "41290-181",
+              "area_m2": 84.946,
+              "floor": 16,
+              "record_kind": "rent",
+              "deposit_100m": 10.5,
               "monthly_rent_10k_krw": 0,
               "lease_type": "new",
               "rent_category": "jeonse",
@@ -1853,9 +1857,9 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_name": 24
+        "exact_lot_area_name": 25
       },
-      "provisional_total": 24
+      "provisional_total": 25
     },
     {
       "complex_id": "gw-bellarte",
@@ -1892,7 +1896,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.0,
               "matched_registered_area_m2": 84.9763,
               "match_reason": "exact_lot_area_name",
@@ -1911,7 +1914,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.1,
               "matched_registered_area_m2": 84.9763,
               "match_reason": "exact_lot_area_name",
@@ -1930,7 +1932,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.0,
               "matched_registered_area_m2": 84.9763,
               "match_reason": "exact_lot_area_name",
@@ -2288,7 +2289,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.0,
               "matched_registered_area_m2": 84.92,
               "match_reason": "exact_lot_area_name",
@@ -2307,7 +2307,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 20.35,
               "matched_registered_area_m2": 84.92,
               "match_reason": "exact_lot_area_name",
@@ -2326,7 +2325,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 18.9,
               "matched_registered_area_m2": 84.92,
               "match_reason": "exact_lot_area_name",
@@ -2345,7 +2343,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.4,
               "matched_registered_area_m2": 84.92,
               "match_reason": "exact_lot_area_name",
@@ -2608,7 +2605,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 13.8,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -2627,7 +2623,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 14.2,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -2646,7 +2641,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 14.3,
               "matched_registered_area_m2": 84.91,
               "match_reason": "exact_lot_area_name",
@@ -2740,7 +2734,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 15.25,
               "matched_registered_area_m2": 84.95,
               "match_reason": "exact_lot_area_name",
@@ -2759,7 +2752,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 13.5,
               "matched_registered_area_m2": 84.95,
               "match_reason": "exact_lot_area_name",
@@ -2908,7 +2900,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 27.5,
               "matched_registered_area_m2": 133.82,
               "match_reason": "exact_lot_area_name",
@@ -3095,7 +3086,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 29.75,
               "matched_registered_area_m2": 124.52,
               "match_reason": "exact_lot_area_name",
@@ -3114,7 +3104,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 29.5,
               "matched_registered_area_m2": 124.52,
               "match_reason": "exact_lot_area_name",
@@ -3133,7 +3122,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 30.7,
               "matched_registered_area_m2": 124.52,
               "match_reason": "exact_lot_area_name",
@@ -3282,7 +3270,6 @@
               "record_kind": "sale",
               "method": "direct",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 25.3,
               "matched_registered_area_m2": 129.72,
               "match_reason": "exact_lot_area_name",
@@ -3524,7 +3511,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 22.5,
               "matched_registered_area_m2": 114.79,
               "match_reason": "exact_lot_area_name",
@@ -3614,7 +3600,7 @@
           "counts": {
             "sales": 0,
             "new_jeonse": 2,
-            "other_rent": 4,
+            "other_rent": 5,
             "brokered_sales": 0,
             "direct_sales": 0,
             "cancelled_sales": 0,
@@ -3663,6 +3649,25 @@
             }
           ],
           "other_rent": [
+            {
+              "provisional_record_hash": "57265af5c6486bed44aa9a9c",
+              "contract_date": "2026-11-19",
+              "apartment_name": "성복역롯데캐슬파크나인",
+              "legal_dong": "성복동",
+              "jibun": "814",
+              "apartment_seq": "41465-477",
+              "area_m2": 84.91,
+              "floor": 8,
+              "record_kind": "rent",
+              "deposit_100m": 7.8,
+              "monthly_rent_10k_krw": 0,
+              "lease_type": "renewal",
+              "rent_category": "jeonse",
+              "matched_registered_area_m2": 84.91,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
             {
               "provisional_record_hash": "923776fc1a90f789bda67146",
               "contract_date": "2026-10-27",
@@ -3743,9 +3748,9 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_name": 6
+        "exact_lot_area_name": 7
       },
-      "provisional_total": 6
+      "provisional_total": 7
     },
     {
       "complex_id": "bd-yangji2",
@@ -3911,7 +3916,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 20.48,
               "matched_registered_area_m2": 84.97,
               "match_reason": "exact_lot_area_name",
@@ -4112,7 +4116,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 25.68,
               "matched_registered_area_m2": 134.91,
               "match_reason": "exact_lot_area_name",
@@ -4184,7 +4187,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 19.0,
               "matched_registered_area_m2": 120.14,
               "match_reason": "exact_lot_area_name",
@@ -4236,7 +4238,6 @@
               "record_kind": "sale",
               "method": "brokered",
               "cancelled": false,
-              "cancelled_on": null,
               "price_100m": 21.3,
               "matched_registered_area_m2": 129.45,
               "match_reason": "exact_lot_area_name",
