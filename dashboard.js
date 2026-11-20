@@ -81,7 +81,7 @@ function candidateCard(x,num,full){
  return '<article class="complex-card trial-card">'+
  '<div class="card-head"><span class="pill warning">'+(full?"국토부 1차 참고":"실거래 표본 부족")+'</span><small>'+(full?"비교 "+num:"순위 없음")+'</small></div>'+
  '<h3>'+ESC(x.complex.name)+' <span class="trial-area">'+ESC(x.area)+'㎡</span></h3>'+
- '<p>'+ESC(x.complex.neighborhood||"")+" · "+ESC(x.complex.households)+"세대 (정적정보 재검증 대기)</p>'+
+ '<p>'+ESC(x.complex.neighborhood||"")+" · "+ESC(x.complex.households)+'세대 (정적정보 재검증 대기)</p>'+
  '<div class="trial-price">'+range(x.sales.map(t=>t.price_100m))+'</div>'+
  '<p>중개 신고 '+x.sales.length+'건'+(x.date?" · 최신 "+ESC(x.date):"")+'</p>'+
  '<p>신규 전세 '+x.leases.length+'건 · '+(ratio!==null?"참고 전세가율 "+ratio.toFixed(1)+"%":"전세가율 미산정")+'</p>'+
