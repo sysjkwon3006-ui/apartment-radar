@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-11-18T13:48:11+00:00",
-  "underlying_molit_run": "2026-11-18T13:04:23+00:00",
+  "generated_at_utc": "2026-11-20T07:46:35+00:00",
+  "underlying_molit_run": "2026-11-20T07:46:35+00:00",
   "basis": "STAGING ONLY: exact region + legal lot + subtype area; name must also match for exact-name class",
   "disclaimer": "NOT INDEPENDENTLY VERIFIED. No ranking, valuation, or approved transactions derived from this file.",
   "totals": {
-    "provisional_matches": 194,
+    "provisional_matches": 200,
     "name_needs_review": 0,
-    "address_area_name_exact": 194,
+    "address_area_name_exact": 200,
     "ambiguous_registry_match": 0,
-    "registered_lot_but_area_unlisted": 189,
-    "not_in_registry": 16700,
-    "staged_rows": 17463,
-    "raw_missing_lot": 380,
+    "registered_lot_but_area_unlisted": 197,
+    "not_in_registry": 32899,
+    "staged_rows": 35460,
+    "raw_missing_lot": 2164,
     "registry_candidates": 18,
     "registry_without_exact_lot": 0,
     "provisional_complexes_with_rows": 17,
@@ -23,6 +23,27 @@
   "sample_conflicts": [
     {
       "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41135",
+      "lot": "금곡동 141",
+      "raw_apartment": "청솔마을(대원)",
+      "raw_area": 101.67
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "11740",
+      "lot": "상일동 514",
+      "raw_apartment": "고덕롯데캐슬베네루체",
+      "raw_area": 122.082
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41135",
+      "lot": "서현동 96",
+      "raw_apartment": "시범우성",
+      "raw_area": 84.6
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
       "region_code": "11650",
       "lot": "우면동 773",
       "raw_apartment": "서초힐스",
@@ -30,10 +51,24 @@
     },
     {
       "reason": "registered_lot_but_area_unlisted",
+      "region_code": "11650",
+      "lot": "우면동 717",
+      "raw_apartment": "서초네이처힐3단지",
+      "raw_area": 84.84
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
       "region_code": "41135",
       "lot": "수내동 36",
       "raw_apartment": "양지마을(2단지)(청구)",
       "raw_area": 84.6
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41290",
+      "lot": "원문동 4",
+      "raw_apartment": "래미안슈르",
+      "raw_area": 84.961
     },
     {
       "reason": "registered_lot_but_area_unlisted",
@@ -90,6 +125,13 @@
       "lot": "수내동 55",
       "raw_apartment": "파크타운(롯데)",
       "raw_area": 131.49
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41465",
+      "lot": "성복동 819",
+      "raw_apartment": "성복역롯데캐슬클라시엘",
+      "raw_area": 116.95
     },
     {
       "reason": "registered_lot_but_area_unlisted",
@@ -254,6 +296,13 @@
     },
     {
       "reason": "registered_lot_but_area_unlisted",
+      "region_code": "41465",
+      "lot": "성복동 819",
+      "raw_apartment": "성복역롯데캐슬클라시엘",
+      "raw_area": 116.93
+    },
+    {
+      "reason": "registered_lot_but_area_unlisted",
       "region_code": "41290",
       "lot": "원문동 4",
       "raw_apartment": "래미안슈르",
@@ -391,55 +440,6 @@
       "lot": "성복동 789",
       "raw_apartment": "성복역롯데캐슬골드타운",
       "raw_area": 84.9979
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41465",
-      "lot": "성복동 789",
-      "raw_apartment": "성복역롯데캐슬골드타운",
-      "raw_area": 84.0
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41290",
-      "lot": "원문동 4",
-      "raw_apartment": "래미안슈르",
-      "raw_area": 84.961
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41135",
-      "lot": "서현동 96",
-      "raw_apartment": "시범우성",
-      "raw_area": 84.6
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41465",
-      "lot": "성복동 789",
-      "raw_apartment": "성복역롯데캐슬골드타운",
-      "raw_area": 84.9979
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "11650",
-      "lot": "우면동 773",
-      "raw_apartment": "서초힐스",
-      "raw_area": 84.95
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41135",
-      "lot": "수내동 55",
-      "raw_apartment": "파크타운(롯데)",
-      "raw_area": 101.91
-    },
-    {
-      "reason": "registered_lot_but_area_unlisted",
-      "region_code": "41465",
-      "lot": "성복동 819",
-      "raw_apartment": "성복역롯데캐슬클라시엘",
-      "raw_area": 101.82
     }
   ],
   "candidate_groups": [
@@ -947,16 +947,35 @@
         {
           "registered_area_m2": 84.99,
           "counts": {
-            "sales": 4,
-            "new_jeonse": 5,
+            "sales": 5,
+            "new_jeonse": 6,
             "other_rent": 17,
-            "brokered_sales": 4,
+            "brokered_sales": 5,
             "direct_sales": 0,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
             "name_conflicts": 0
           },
           "sales": [
+            {
+              "provisional_record_hash": "1159922982596de1e4184a6f",
+              "contract_date": "2026-11-01",
+              "apartment_name": "센트럴파크푸르지오써밋",
+              "legal_dong": "부림동",
+              "jibun": "96",
+              "apartment_seq": "41290-435",
+              "area_m2": 84.99,
+              "floor": 16,
+              "record_kind": "sale",
+              "method": "brokered",
+              "cancelled": false,
+              "cancelled_on": null,
+              "price_100m": 24.9,
+              "matched_registered_area_m2": 84.99,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
             {
               "provisional_record_hash": "b90f2142d717d7825eed6e8b",
               "contract_date": "2026-10-31",
@@ -1084,6 +1103,25 @@
               "floor": 28,
               "record_kind": "rent",
               "deposit_100m": 13.0,
+              "monthly_rent_10k_krw": 0,
+              "lease_type": "new",
+              "rent_category": "jeonse",
+              "matched_registered_area_m2": 84.99,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
+            {
+              "provisional_record_hash": "c3007f077eb02fc19222797a",
+              "contract_date": "2026-09-08",
+              "apartment_name": "센트럴파크푸르지오써밋",
+              "legal_dong": "부림동",
+              "jibun": "96",
+              "apartment_seq": "41290-435",
+              "area_m2": 84.99,
+              "floor": 8,
+              "record_kind": "rent",
+              "deposit_100m": 11.5,
               "monthly_rent_10k_krw": 0,
               "lease_type": "new",
               "rent_category": "jeonse",
@@ -1290,7 +1328,7 @@
           "registered_area_m2": 101.93,
           "counts": {
             "sales": 0,
-            "new_jeonse": 2,
+            "new_jeonse": 3,
             "other_rent": 3,
             "brokered_sales": 0,
             "direct_sales": 0,
@@ -1300,6 +1338,25 @@
           },
           "sales": [],
           "new_jeonse": [
+            {
+              "provisional_record_hash": "70ce47851ff4f468e2ae954c",
+              "contract_date": "2026-11-12",
+              "apartment_name": "센트럴파크푸르지오써밋",
+              "legal_dong": "부림동",
+              "jibun": "96",
+              "apartment_seq": "41290-435",
+              "area_m2": 101.93,
+              "floor": 14,
+              "record_kind": "rent",
+              "deposit_100m": 13.5,
+              "monthly_rent_10k_krw": 0,
+              "lease_type": "new",
+              "rent_category": "jeonse",
+              "matched_registered_area_m2": 101.93,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
             {
               "provisional_record_hash": "23248f8b9aab0c0bc0b06e89",
               "contract_date": "2026-10-14",
@@ -1401,9 +1458,9 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_name": 31
+        "exact_lot_area_name": 34
       },
-      "provisional_total": 31
+      "provisional_total": 34
     },
     {
       "complex_id": "gw-raemian",
@@ -1814,7 +1871,7 @@
           "registered_area_m2": 84.9763,
           "counts": {
             "sales": 3,
-            "new_jeonse": 8,
+            "new_jeonse": 9,
             "other_rent": 10,
             "brokered_sales": 3,
             "direct_sales": 0,
@@ -1882,6 +1939,25 @@
             }
           ],
           "new_jeonse": [
+            {
+              "provisional_record_hash": "18a7476c1a96ef96913f17c9",
+              "contract_date": "2026-11-10",
+              "apartment_name": "과천푸르지오벨라르테",
+              "legal_dong": "갈현동",
+              "jibun": "824",
+              "apartment_seq": "41290-480",
+              "area_m2": 84.9763,
+              "floor": 19,
+              "record_kind": "rent",
+              "deposit_100m": 9.7,
+              "monthly_rent_10k_krw": 0,
+              "lease_type": "new",
+              "rent_category": "jeonse",
+              "matched_registered_area_m2": 84.9763,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
             {
               "provisional_record_hash": "b9d47da814cbc3957a4afeb0",
               "contract_date": "2026-10-31",
@@ -2007,25 +2083,6 @@
               "floor": 17,
               "record_kind": "rent",
               "deposit_100m": 7.75,
-              "monthly_rent_10k_krw": 0,
-              "lease_type": "new",
-              "rent_category": "jeonse",
-              "matched_registered_area_m2": 84.9763,
-              "match_reason": "exact_lot_area_name",
-              "verification_status": "FIRST_SOURCE_ONLY",
-              "independent_source_confirmed": false
-            },
-            {
-              "provisional_record_hash": "458324075fc2431d79ba1ee1",
-              "contract_date": "2026-09-03",
-              "apartment_name": "과천푸르지오벨라르테",
-              "legal_dong": "갈현동",
-              "jibun": "824",
-              "apartment_seq": "41290-480",
-              "area_m2": 84.9763,
-              "floor": 4,
-              "record_kind": "rent",
-              "deposit_100m": 8.3,
               "monthly_rent_10k_krw": 0,
               "lease_type": "new",
               "rent_category": "jeonse",
@@ -2192,9 +2249,9 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_name": 21
+        "exact_lot_area_name": 22
       },
-      "provisional_total": 21
+      "provisional_total": 22
     },
     {
       "complex_id": "gd-beneruce",
@@ -2209,16 +2266,35 @@
         {
           "registered_area_m2": 84.92,
           "counts": {
-            "sales": 3,
+            "sales": 4,
             "new_jeonse": 3,
             "other_rent": 12,
-            "brokered_sales": 3,
+            "brokered_sales": 4,
             "direct_sales": 0,
             "cancelled_sales": 0,
             "unknown_sale_method": 0,
             "name_conflicts": 0
           },
           "sales": [
+            {
+              "provisional_record_hash": "3a8d076b1cb9de7a54e67213",
+              "contract_date": "2026-11-01",
+              "apartment_name": "고덕롯데캐슬베네루체",
+              "legal_dong": "상일동",
+              "jibun": "514",
+              "apartment_seq": "11740-4672",
+              "area_m2": 84.923,
+              "floor": 3,
+              "record_kind": "sale",
+              "method": "brokered",
+              "cancelled": false,
+              "cancelled_on": null,
+              "price_100m": 19.0,
+              "matched_registered_area_m2": 84.92,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
             {
               "provisional_record_hash": "f77736918fe1e71ecc0b9311",
               "contract_date": "2026-10-28",
@@ -2493,9 +2569,9 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_name": 18
+        "exact_lot_area_name": 19
       },
-      "provisional_total": 18
+      "provisional_total": 19
     },
     {
       "complex_id": "su-clasiel",
@@ -3428,7 +3504,7 @@
           "counts": {
             "sales": 1,
             "new_jeonse": 0,
-            "other_rent": 2,
+            "other_rent": 3,
             "brokered_sales": 1,
             "direct_sales": 0,
             "cancelled_sales": 0,
@@ -3458,6 +3534,25 @@
           ],
           "new_jeonse": [],
           "other_rent": [
+            {
+              "provisional_record_hash": "a7f66ffcf50a4ed03a2e3132",
+              "contract_date": "2026-10-29",
+              "apartment_name": "서초네이처힐3단지",
+              "legal_dong": "우면동",
+              "jibun": "717",
+              "apartment_seq": "11650-3864",
+              "area_m2": 114.79,
+              "floor": 17,
+              "record_kind": "rent",
+              "deposit_100m": 8.0,
+              "monthly_rent_10k_krw": 130,
+              "lease_type": "renewal",
+              "rent_category": "monthly_or_unknown",
+              "matched_registered_area_m2": 114.79,
+              "match_reason": "exact_lot_area_name",
+              "verification_status": "FIRST_SOURCE_ONLY",
+              "independent_source_confirmed": false
+            },
             {
               "provisional_record_hash": "198ca750c59db4498a3aa8bd",
               "contract_date": "2026-10-24",
@@ -3500,9 +3595,9 @@
         }
       ],
       "match_reasons": {
-        "exact_lot_area_name": 6
+        "exact_lot_area_name": 7
       },
-      "provisional_total": 6
+      "provisional_total": 7
     },
     {
       "complex_id": "su-parknine",
