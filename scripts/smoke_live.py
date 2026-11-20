@@ -58,14 +58,14 @@ def check():
 
 def main():
     errors = []
-    for attempt in range(1, 9):
+    for attempt in range(1, 16):
         try:
             check()
             return 0
         except (AssertionError, HTTPError, URLError, TimeoutError, ValueError, RuntimeError) as exc:
             errors.append(str(exc))
-            print(f"Live check attempt {attempt}/8: {exc}", flush=True)
-            if attempt < 8:
+            print(f"Live check attempt {attempt}/15: {exc}", flush=True)
+            if attempt < 15:
                 time.sleep(12)
     print("Live deployment check FAILED. Last issue:", errors[-1], file=sys.stderr)
     return 1
