@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: apartment-radar-history-backfill
+  group: apartment-radar-publish
   cancel-in-progress: false
 jobs:
   history:
@@ -44,7 +44,14 @@ jobs:
             echo 'History unchanged'
           else
             git commit -m 'data: refresh 24-month MOLIT history (unverified)'
-            git push origin main
+            for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; exit 1; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          echo '::error::Could not safely publish after retries'
+          exit 1
           fi
       - name: State verification boundary
         run: echo 'Historical points are MOLIT first-source only. Independent verification remains pending.'
