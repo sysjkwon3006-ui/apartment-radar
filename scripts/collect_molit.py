@@ -231,10 +231,40 @@ def normalize(kind: str, region: dict, month: str, raw: dict) -> dict | None:
     return core
 
 
+# Public staging is for published audit and matching, not a full duplicated API response.
+# Retain unit identity, deal date, region, cancellation and lease type.
+# Move repeated provenance to the top-level staging metadata.
+PUBLIC_FIELDS = (
+    "region_code", "region_name", "requested_month", "contract_date",
+    "apartment_name", "apartment_seq", "legal_dong", "jibun",
+    "area_m2", "floor", "record_kind", "provisional_record_hash",
+    "price_100m", "method", "cancelled", "cancelled_on",
+    "deposit_100m", "monthly_rent_10k_krw", "lease_type",
+    "rent_category", "renewal_right"
+)
+
+
+def compact_staging(data: dict) -> dict:
+    if not isinstance(data.get("records"), list):
+        raise ValueError("Missing records in staging")
+    result = dict(data)
+    result["record_source"] = "MOLIT_OPEN_API_PRIMARY_ONLY"
+    result["independently_verified"] = False
+    result["records"] = [
+        {k: r[k] for k in PUBLIC_FIELDS if k in r and r[k] is not None and r[k] != ""}
+        for r in data["records"]
+    ]
+    if len(result["records"]) != len(data["records"]):
+        raise ValueError("Unexpected loss of staging rows")
+    return result
+
+
 def atomic_json(path: Path, obj: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(path.suffix + ".tmp")
-    # Large public staging files are served by static hosting: keep them compact.
+    # Keep every staged transaction but remove duplicated fields: Pages max asset size is 25 MiB.
+    if path == STAGING_PATH:
+        obj = compact_staging(obj)
     packed = json.dumps(obj, ensure_ascii=False, separators=(",", ":")) if path == STAGING_PATH else json.dumps(obj, ensure_ascii=False, indent=2)
     temp.write_text(packed + "\n", encoding="utf-8")
     temp.replace(path)
