@@ -1,6 +1,6 @@
 {
-  "schema_version": "2026-11",
-  "explanation": "LAWD_CD is first five digits of current legal-dong code; 2026 Hwaseong split uses Dongtan-gu 41597. Validate on administrative code changes.",
+  "schema_version": "2026-11-20",
+  "explanation": "2026-11-20 expansion; Seoul south Han retains original 11 districts; Gyeonggi South extends from 8 to 22 comparator districts. LAWD_CD is first five digits of legal-dong code. New non-core districts are comparison pools, not automatic ranking upgrades. Check administrative updates, especially Hwaseong split.",
   "regions": [
     {
       "code": "11680",
@@ -97,6 +97,118 @@
       "code": "41430",
       "name": "경기 의왕시",
       "group": "경기 남부"
+    },
+    {
+      "code": "41131",
+      "name": "경기 성남시 수정구(위례 포함)",
+      "group": "경기 남부 확장",
+      "class": "상급지 확장",
+      "commute_note": "인접 서울 생활권",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41133",
+      "name": "경기 성남시 중원구",
+      "group": "경기 남부 확장",
+      "class": "비교 생활권",
+      "commute_note": "분당 인접",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41111",
+      "name": "경기 수원시 장안구",
+      "group": "경기 남부 확장",
+      "class": "출퇴근 비교",
+      "commute_note": "동탄 접근성 개별 검토",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41113",
+      "name": "경기 수원시 권선구",
+      "group": "경기 남부 확장",
+      "class": "출퇴근 비교",
+      "commute_note": "동탄 접근성 개별 검토",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41115",
+      "name": "경기 수원시 팔달구",
+      "group": "경기 남부 확장",
+      "class": "상급지 확장",
+      "commute_note": "수원 구도심",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41171",
+      "name": "경기 안양시 만안구",
+      "group": "경기 남부 확장",
+      "class": "비교 생활권",
+      "commute_note": "동탄 장거리 가능성",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41210",
+      "name": "경기 광명시",
+      "group": "경기 남부 확장",
+      "class": "상급지 확장",
+      "commute_note": "동탄 장거리 가능성",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41450",
+      "name": "경기 하남시(미사·감일 포함)",
+      "group": "경기 남부 확장",
+      "class": "상급지 확장",
+      "commute_note": "동탄 장거리 가능성",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41410",
+      "name": "경기 군포시(산본 포함)",
+      "group": "경기 남부 확장",
+      "class": "비교 생활권",
+      "commute_note": "동탄 출퇴근 개별 검토",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41461",
+      "name": "경기 용인시 처인구",
+      "group": "경기 남부 확장",
+      "class": "출퇴근 비교",
+      "commute_note": "동탄 동남부 접근성 개별 검토",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41370",
+      "name": "경기 오산시",
+      "group": "경기 남부 확장",
+      "class": "출퇴근 비교",
+      "commute_note": "동탄 인접 대조군",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41220",
+      "name": "경기 평택시",
+      "group": "경기 남부 확장",
+      "class": "출퇴근 비교",
+      "commute_note": "동탄 인접 대조군",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41610",
+      "name": "경기 광주시",
+      "group": "경기 남부 확장",
+      "class": "비교 생활권",
+      "commute_note": "동탄 접근성 개별 검토",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "41500",
+      "name": "경기 이천시",
+      "group": "경기 남부 확장",
+      "class": "출퇴근 비교",
+      "commute_note": "동탄 출퇴근 개별 검토",
+      "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
     }
   ]
 }
