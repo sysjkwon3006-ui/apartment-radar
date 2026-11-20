@@ -28,6 +28,7 @@ jobs:
         run: python scripts/validate.py
       - name: JavaScript syntax checks
         run: |
+          node --check dashboard.js
           node --check app.js
           node --check explore.js
           node --check matches.js
