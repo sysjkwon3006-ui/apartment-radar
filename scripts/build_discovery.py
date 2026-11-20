@@ -153,6 +153,27 @@ def main():
     temp=args.output.with_suffix(".tmp")
     temp.write_text(json.dumps(index,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
     temp.replace(args.output)
+    # Pages frontend only needs this compact unverified search index, not every raw transaction.
+    brief_fields = (
+        "region_code", "legal_dong", "jibun", "apartment_name", "area_m2",
+        "sale_median", "sale_max", "sale_count_all_in_period", "latest_sale_date"
+    )
+    summary = {
+        "schema_version": "1.0",
+        "generated_at_utc": index["generated_at_utc"],
+        "underlying_molit_run": index["underlying_molit_run"],
+        "coverage_district_count": index["coverage_district_count"],
+        "candidate_unit_count": index["candidate_unit_count"],
+        "disclaimer": "MOLIT FIRST SOURCE ONLY. Household count unknown, 500+ not confirmed; no independent transaction cross-check",
+        "entries": [
+            {**{k: row[k] for k in brief_fields}, "households": None, "verified": False}
+            for row in index["entries"]
+        ],
+    }
+    summary_path = args.output.parent / "summary.json"
+    summary_tmp = summary_path.with_suffix(".tmp")
+    summary_tmp.write_text(json.dumps(summary, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
+    summary_tmp.replace(summary_path)
     print(f"Discovery: {len(index['entries'])} unverified exact-apartment/subtype groups from {len(staging['records'])} staged records")
     print("No household-size or independent-source evidence inferred.")
 
