@@ -151,7 +151,7 @@ def main():
     index=build(staging,regions)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     temp=args.output.with_suffix(".tmp")
-    temp.write_text(json.dumps(index,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    temp.write_text(json.dumps(index,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
     temp.replace(args.output)
     print(f"Discovery: {len(index['entries'])} unverified exact-apartment/subtype groups from {len(staging['records'])} staged records")
     print("No household-size or independent-source evidence inferred.")
