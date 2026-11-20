@@ -205,7 +205,7 @@ async function start(){
  setup();
  const [region,registry,meta,matches,history,discovery]=await Promise.all([
   fetchJSON("./data/regions.json"),fetchJSON("./data/complexes.json"),fetchJSON("./data/site-meta.json"),
-  fetchJSON("./data/matches/latest.json",true),fetchJSON("./data/history/latest.json",true),fetchJSON("./data/discovery/latest.json",true)
+  fetchJSON("./data/matches/latest.json",true),fetchJSON("./data/history/latest.json",true),fetchJSON("./data/discovery/summary.json",true)
  ]);
  S.regions=region.regions;S.registry=registry.complexes;S.meta=meta;S.matches=matches;S.history=history;S.discovery=discovery;
  reset();
