@@ -75,3 +75,5 @@ jobs:
           fi
       - name: Explain verification boundary
         run: echo 'Only public first-source staging, provisional matching queue, discovery and collection status were updated. No household counts or independent transaction verification were inferred.'
+
+# Coverage refresh: all Seoul districts + expanded Gyeonggi jurisdictions, 2026-11-20.
