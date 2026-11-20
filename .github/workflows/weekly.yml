@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/molit/latest.json data/site-meta.json data/matches/latest.json data/discovery/latest.json
+          git add data/molit/latest.json data/site-meta.json data/matches/latest.json data/discovery/latest.json data/discovery/summary.json
           if git diff --cached --quiet; then
             echo 'No staging changes to commit'
           else
