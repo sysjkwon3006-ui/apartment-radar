@@ -236,8 +236,7 @@ def atomic_json(path: Path, obj: dict) -> None:
     temp = path.with_suffix(path.suffix + ".tmp")
     # Large public staging files are served by static hosting: keep them compact.
     packed = json.dumps(obj, ensure_ascii=False, separators=(",", ":")) if path == STAGING_PATH else json.dumps(obj, ensure_ascii=False, indent=2)
-    temp.write_text(packed + "
-", encoding="utf-8")
+    temp.write_text(packed + "\n", encoding="utf-8")
     temp.replace(path)
 
 
