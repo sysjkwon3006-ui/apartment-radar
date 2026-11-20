@@ -234,7 +234,10 @@ def normalize(kind: str, region: dict, month: str, raw: dict) -> dict | None:
 def atomic_json(path: Path, obj: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix(path.suffix + ".tmp")
-    temp.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Large public staging files are served by static hosting: keep them compact.
+    packed = json.dumps(obj, ensure_ascii=False, separators=(",", ":")) if path == STAGING_PATH else json.dumps(obj, ensure_ascii=False, indent=2)
+    temp.write_text(packed + "
+", encoding="utf-8")
     temp.replace(path)
 
 
