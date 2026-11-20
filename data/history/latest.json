@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-11-20T07:37:34+00:00",
+  "generated_at_utc": "2026-11-20T23:39:08+00:00",
   "months": [
     "202611",
     "202610",
@@ -31,7 +31,7 @@
   "verification_status": "primary_only",
   "independent_source_verified": false,
   "api_calls": 322,
-  "matched_records": 2590,
+  "matched_records": 2592,
   "pending_name_conflicts_excluded": 0,
   "units": [
     {
@@ -9401,6 +9401,19 @@
           "record_kind": "rent"
         },
         {
+          "date": "2026-09-19",
+          "month": "2026-09",
+          "floor": 16,
+          "area_m2": 84.946,
+          "source": "MOLIT_OPEN_API_ONLY",
+          "verified_independently": false,
+          "deposit_100m": 10.5,
+          "monthly_rent_10k_krw": 0,
+          "lease_type": "new",
+          "rent_category": "jeonse",
+          "record_kind": "rent"
+        },
+        {
           "date": "2026-09-02",
           "month": "2026-09",
           "floor": 12,
@@ -12082,7 +12095,7 @@
       ],
       "counts": {
         "brokered_sales": 45,
-        "new_jeonse": 47,
+        "new_jeonse": 48,
         "all_sales": 49,
         "other_rent": 158
       }
@@ -34342,6 +34355,19 @@
       ],
       "other_rent": [
         {
+          "date": "2026-11-19",
+          "month": "2026-11",
+          "floor": 8,
+          "area_m2": 84.91,
+          "source": "MOLIT_OPEN_API_ONLY",
+          "verified_independently": false,
+          "deposit_100m": 7.8,
+          "monthly_rent_10k_krw": 0,
+          "lease_type": "renewal",
+          "rent_category": "jeonse",
+          "record_kind": "rent"
+        },
+        {
           "date": "2026-10-27",
           "month": "2026-10",
           "floor": 15,
@@ -34670,7 +34696,7 @@
         "brokered_sales": 27,
         "new_jeonse": 24,
         "all_sales": 28,
-        "other_rent": 19
+        "other_rent": 20
       }
     }
   ]
