@@ -12,7 +12,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: apartment-radar-data-updates
+  group: apartment-radar-publish
   cancel-in-progress: false
 jobs:
   fetch_molit:
@@ -58,7 +58,14 @@ jobs:
             echo 'No staging changes to commit'
           else
             git commit -m 'data: refresh MOLIT primary-source staging (unverified)'
-            git push origin main
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort || true; exit 1; }
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 5
+            done
+            echo '::error::Could not safely publish after retries'
+            exit 1
           fi
       - name: Explain verification boundary
         run: echo 'Only first-source staging, matching review queue and collection status were updated. No records automatically became verified TOP5 candidates.'
