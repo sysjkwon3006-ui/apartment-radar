@@ -6,6 +6,10 @@ on:
         description: 'Contract months to refresh (1-24; initial backfill may use 24)'
         required: false
         default: '3'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/weekly.yml'
   schedule:
     # Saturday 07:15 KST is Friday 22:15 UTC
     - cron: '15 22 * * 5'
@@ -47,13 +51,15 @@ jobs:
         run: python scripts/collect_molit.py --months "$MONTHS"
       - name: Prepare provisional complex matching review queue
         run: python scripts/match_candidates.py
+      - name: Build broad apartment discovery list (unverified)
+        run: python scripts/build_discovery.py
       - name: Validate that candidate rankings remain evidence-gated
         run: python scripts/validate.py
       - name: Commit FIRST-SOURCE staging and status only
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/molit/latest.json data/site-meta.json data/matches/latest.json
+          git add data/molit/latest.json data/site-meta.json data/matches/latest.json data/discovery/latest.json
           if git diff --cached --quiet; then
             echo 'No staging changes to commit'
           else
@@ -68,4 +74,4 @@ jobs:
             exit 1
           fi
       - name: Explain verification boundary
-        run: echo 'Only first-source staging, matching review queue and collection status were updated. No records automatically became verified TOP5 candidates.'
+        run: echo 'Only public first-source staging, provisional matching queue, discovery and collection status were updated. No household counts or independent transaction verification were inferred.'
