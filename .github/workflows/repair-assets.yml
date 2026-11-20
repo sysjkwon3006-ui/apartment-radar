@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: apartment-radar-publish
+  group: apartment-radar-immediate-asset-repair
   cancel-in-progress: false
 jobs:
   repair:
