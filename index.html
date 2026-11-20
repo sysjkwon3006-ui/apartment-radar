@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="서울 한강 이남·경기 남부 아파트 지역별 TOP5 대시보드. 두 출처 검증을 통과한 거래만 확정 표시합니다.">
+  <meta name="description" content="서울 25개 구 전체 및 경기 남부 아파트 지역별 데이터 대시보드. 두 출처 검증을 통과한 거래만 확정 표시합니다.">
   <title>Apartment Radar | 지역별 아파트 TOP5</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -25,16 +25,64 @@
       <div class="metric"><span>지역별 추천</span><strong id="top-count">—</strong><small>선택 조건 기준</small></div>
       <div class="metric"><span>마지막 검증 완료</span><strong class="metric-date" id="last-verified">—</strong><small>승인 거래 기준</small></div>
     </section>
-    <section class="filter-panel" aria-label="탐색 조건">
-      <div class="section-top"><div><div class="eyebrow">EXPLORE</div><h2>조건을 골라보세요</h2></div><button id="reset-btn" class="secondary-button" type="button">초기화</button></div>
-      <div class="filters">
-        <label>지역 <select id="area-filter"><option value="all">전체 지역</option><option value="과천">과천</option><option value="분당">분당 전체</option><option value="금곡동">분당 · 금곡동</option><option value="수내동">분당 · 수내동</option><option value="정자동">분당 · 정자동</option><option value="서현동">분당 · 서현동</option><option value="수지">수지·성복</option><option value="서초">서초·우면</option><option value="강동">강동</option><option value="광교">광교</option><option value="판교">판교</option><option value="동탄">동탄</option></select></label>
-        <label>예산 · 면적 <select id="budget-filter"><option value="20-30-large">부모님 · 20~30억 · 전용 100~135㎡</option><option value="20-30-84">부모님 · 20~30억 · 전용 84㎡</option><option value="15-20-84">15~20억 · 전용 84㎡</option><option value="10-15-84">10~15억 · 전용 84㎡</option></select></label>
-        <label>평가 기준 <select id="sort-filter"><option value="asset">급지·장기 자산가치</option><option value="value">가격 매력도</option><option value="commute">동탄 출퇴근</option><option value="living">실거주 편의성</option></select></label>
+    <section class="filter-panel" aria-label="아파트 검색 조건">
+      <div class="section-top"><div><div class="eyebrow">CUSTOM SEARCH · SEOUL 25 GU + GYEONGGI</div><h2>원하는 지역과 가격, 면적을 직접 선택</h2><p class="subtext">예산과 전용면적은 서로 독립적이야. 슬라이더의 양 끝을 움직여 범위를 정해줘.</p></div><button id="reset-btn" class="secondary-button" type="button">조건 초기화</button></div>
+      <div class="new-filters">
+        <div class="filter-field">
+          <label for="province-filter">지역 1 · 시·도</label>
+          <select id="province-filter"><option value="gyeonggi">경기 남부·주변</option><option value="seoul">서울 25개 구 전체</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="district-filter">지역 2 · 시·구</label>
+          <select id="district-filter"><option value="all">전체 지역</option></select>
+        </div>
+      </div>
+      <div class="range-grid">
+        <fieldset class="range-card">
+          <legend>매수 예산 <span>억원</span></legend>
+          <div class="range-heading"><strong id="price-label">20 ~ 30억원</strong><span>5억부터 50억까지</span></div>
+          <div class="double-range" id="price-range" aria-label="매수가 범위">
+            <div class="range-track"></div><div class="range-fill" id="price-fill"></div>
+            <input id="price-min" aria-label="최소 매수가 (억원)" type="range" min="5" max="50" step="0.5" value="20">
+            <input id="price-max" aria-label="최대 매수가 (억원)" type="range" min="5" max="50" step="0.5" value="30">
+          </div>
+          <div class="range-values"><span>최소 <output id="price-min-output">20억</output></span><span>최대 <output id="price-max-output">30억</output></span></div>
+        </fieldset>
+        <fieldset class="range-card">
+          <legend>전용면적 <span>㎡</span></legend>
+          <div class="range-heading"><strong id="area-label">100 ~ 135㎡</strong><span>59㎡부터 165㎡까지</span></div>
+          <div class="double-range" id="area-range" aria-label="전용면적 범위">
+            <div class="range-track"></div><div class="range-fill" id="area-fill"></div>
+            <input id="area-min" aria-label="최소 전용면적 (제곱미터)" type="range" min="59" max="165" step="1" value="100">
+            <input id="area-max" aria-label="최대 전용면적 (제곱미터)" type="range" min="59" max="165" step="1" value="135">
+          </div>
+          <div class="range-values"><span>최소 <output id="area-min-output">100㎡</output></span><span>최대 <output id="area-max-output">135㎡</output></span></div>
+        </fieldset>
+      </div>
+      <div class="sort-row">
+        <div class="filter-field"><label for="sort-filter">현재 가능한 비교 정렬</label>
+          <select id="sort-filter"><option value="sample">동일 타입 중개거래 표본 많은 순</option><option value="recent">가장 최근 중개거래 순</option><option value="cheapest">중개거래 중앙값 낮은 순 (1차)</option></select>
+        </div>
+        <p id="filter-summary" class="subtext">지역·매수가·전용면적을 선택하면 아래 비교 결과가 바뀝니다.</p>
       </div>
     </section>
+    <section class="result-section" id="methodology-section">
+      <div class="section-top"><div><div class="eyebrow">EXPLAINABLE RANKING</div><h2>평가 기준, 실제로 무엇을 측정할까?</h2><p class="subtext">아래는 앞으로 적용할 공개 평가 설계안이야. <strong>현재는 단지별 실제 점수가 전부 미산정</strong>이라 투자매력 순위에 사용하지 않아.</p></div><span class="pill muted">점수 계산 준비 중</span></div>
+      <div class="method-grid">
+        <details><summary>급지·장기 자산가치 <span>점수 미산정</span></summary><p>핵심 생활권/대중교통 접근 30%, 정비사업 추진 단계와 분담금 위험 25%, 학군·일자리·수요 기반 20%, 공급 희소성 15%, 주택 품질·관리 10%. 공공·현장 자료 검증 전 자동 점수 없음.</p></details>
+        <details><summary>가격 매력도 <span>점수 미산정</span></summary><p>동일 급지·면적의 유사 단지 대비 가격 40%, 전세가율·자본 부담 20%, 실제 거래가격 흐름 20%, 거래 표본 및 유동성 20%. 비교군·계약 조건이 동일해야 계산 가능.</p></details>
+        <details><summary>동탄 출퇴근 <span>점수 미산정</span></summary><p>지정된 직장 출입구까지 출근 시간대 이동 소요 60%, 혼잡시간 변동성 20%, 대안 경로·대중교통 정시성 20%. 실측 경로와 출근 시각이 없어 아직 점수 산정 불가.</p></details>
+        <details><summary>실거주 편의성 <span>점수 미산정</span></summary><p>병원·상권·일상시설 30%, 역/버스·도보 경사 25%, 공원·소음·채광 등 쾌적성 25%, 커뮤니티·관리 및 유지비 20%. 데이터·현장 검증을 거쳐야 해.</p></details>
+      </div>
+      <p class="subtext">지금 화면에서 '잠정 후보'는 투자 순위가 아니라 <strong>신고 거래 표본 기준 탐색 순서</strong>로만 표시해. 위 가중치는 설계 기준이며 검증 완료 점수를 뜻하지 않아.</p>
+    </section>
+    <section class="result-section" id="discovery-section">
+      <div class="section-top"><div><div class="eyebrow">EXPANDED SEARCH · PUBLIC DATA</div><h2>선택한 구의 추가 아파트 발견</h2><p class="subtext">등록된 18개 관심단지 밖에서도 실거래 신고가 있는 단지를 검색해. 다만 <strong>500세대 이상 여부·독립 2차 검증이 안 된 후보</strong>라 확정 TOP5와 분리해.</p></div><span id="discovery-count" class="pill muted">데이터 확인 중</span></div>
+      <div id="discovery-results"><div class="empty">지역 확장 신고자료를 불러오는 중…</div></div>
+      <p id="discovery-status" class="subtext"></p>
+    </section>
     <section class="result-section" id="trial-section">
-      <div class="section-top"><div><div class="eyebrow">LIVE RESEARCH · MOLIT FIRST SOURCE ONLY</div><h2>지역별 잠정 TOP5 비교</h2><p class="subtext">국토부 신고·같은 타입 중개거래 3건 이상을 기준으로 한 자료 탐색 순서야. <strong>장기 자산가치 순위나 2중 검증 완료 추천이 아님.</strong></p></div><span id="preview-count" class="pill warning">로딩 중</span></div>
+      <div class="section-top"><div><div class="eyebrow">LIVE RESEARCH · MOLIT FIRST SOURCE ONLY</div><h2>500세대 이상 등록 후보 · 잠정 비교</h2><p class="subtext">국토부 신고·같은 타입 중개거래 3건 이상을 기준으로 한 표본순 탐색 목록이야. <strong>장기 자산가치 순위나 2중 검증 완료 추천이 아님.</strong></p></div><span id="preview-count" class="pill warning">로딩 중</span></div>
       <div class="trial-alert"><strong>잠정 자료와 확정 추천을 분리했어.</strong> 단지명·법정동·지번·면적 일치, 중개 여부만 1차 확인한 신고가격이야. 독립 서비스 건별 대조, 전세 신규계약 재검증, 재건축·출퇴근·적정가격 평가를 마치기 전이므로 투자 결론으로 사용하지 마.</div>
       <div id="preview-top" aria-live="polite"><div class="empty">잠정 실거래 불러오는 중…</div></div>
       <p id="preview-source-date" class="subtext"></p>
@@ -65,7 +113,6 @@
     </section>
   </main>
   <footer class="footer"><div class="wrap"><strong>Apartment Radar</strong><p>공개 검증 자료 기반 참고용 대시보드. 투자 권유나 확정 시세를 의미하지 않습니다.</p><p>원자료 신고·정정 지연과 비교 타입의 차이를 확인하세요.</p></div></footer>
-  <script src="./app.js" defer></script>
-  <script src="./explore.js" defer></script>
+  <script src="./dashboard.js" defer></script>
 </body>
 </html>
