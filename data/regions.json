@@ -1,6 +1,6 @@
 {
-  "schema_version": "2026-11-20",
-  "explanation": "2026-11-20 expansion; Seoul south Han retains original 11 districts; Gyeonggi South extends from 8 to 22 comparator districts. LAWD_CD is first five digits of legal-dong code. New non-core districts are comparison pools, not automatic ranking upgrades. Check administrative updates, especially Hwaseong split.",
+  "schema_version": "2026-11-20-seoul-all",
+  "explanation": "Seoul all 25 gu + selected south-Gyeonggi 22 jurisdictions. Region filter is now city/district based, not micro-neighborhood. 2026 Dongtan-gu legal code is 41597. All new discovery entries are first-source only; not 500-household confirmed.",
   "regions": [
     {
       "code": "11680",
@@ -209,6 +209,90 @@
       "class": "출퇴근 비교",
       "commute_note": "동탄 출퇴근 개별 검토",
       "ranking_policy": "급지 우선·실거래/세대수 검증 전 추천 금지"
+    },
+    {
+      "code": "11110",
+      "name": "서울 종로구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11140",
+      "name": "서울 중구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11170",
+      "name": "서울 용산구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11200",
+      "name": "서울 성동구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11215",
+      "name": "서울 광진구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11230",
+      "name": "서울 동대문구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11260",
+      "name": "서울 중랑구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11290",
+      "name": "서울 성북구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11305",
+      "name": "서울 강북구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11320",
+      "name": "서울 도봉구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11350",
+      "name": "서울 노원구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11380",
+      "name": "서울 은평구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11410",
+      "name": "서울 서대문구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
+    },
+    {
+      "code": "11440",
+      "name": "서울 마포구",
+      "group": "서울 전체",
+      "ranking_policy": "서울 외곽·동탄 통근 불리지역은 매수 우선순위에 감점 적용 예정; 현재 정성점수 미산출"
     }
   ]
 }
